@@ -10,13 +10,19 @@
 #
 ### END INIT INFO
 
-# Supervisord auto-start
+# Supervisord auto-start for Raspberry PI
 #
-# Save in /etc/init.d/supervisord
+# Save this file in /etc/init.d/supervisord
+# After save it, exec the commands:
+# sudo chmod +x /etc/init.d/supervisord
+# sudo update-rc.d supervisord defaults
 #
 # description: Auto-starts supervisord
 # processname: supervisord
 # pidfile: /var/run/supervisord.pid
+#
+# More info in:
+# http://serverfault.com/questions/96499/how-to-automatically-start-supervisord-on-linux-ubuntu
 
 SUPERVISORD=/usr/local/bin/supervisord
 SUPERVISORCTL=/usr/local/bin/supervisorctl
