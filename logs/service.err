@@ -2,3 +2,4 @@ WARNING:tornado.access:405 CONNECT mx0.mail2000.com.tw:25 (1.171.76.167) 7.03ms
 WARNING:tornado.access:405 CONNECT mx3.mail2000.com.tw:25 (36.226.115.224) 6.66ms
 WARNING:tornado.access:404 GET /favicon.ico (81.45.53.235) 6.05ms
 WARNING:tornado.access:404 GET /favicon.ico (81.45.53.235) 6.23ms
+WARNING:tornado.access:404 GET http://www.ly.com/ (182.254.158.222) 6.88ms

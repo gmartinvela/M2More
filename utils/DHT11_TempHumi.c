@@ -2,10 +2,24 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdint.h>
+// To manage MySQL inserts!
+#include <my_global.h>
+#include <mysql.h>
+//
+
 #define MAX_TIME 85
 #define DHT11PIN 7
 
 int dht11_val[5]={0,0,0,0,0};
+
+// To manage MySQL inserts!
+void finish_with_error(MYSQL *con)
+{
+  fprintf(stderr, "%s\n", mysql_error(con));
+  mysql_close(con);
+  exit(1);
+}
+//
 
 void dht11_read_val()
 {
@@ -46,13 +60,30 @@ void dht11_read_val()
   {
     farenheit=dht11_val[2]*9./5.+32;
     printf("Humidity = %d.%d %% Temperature = %d.%d *C (%.1f *F)\n",dht11_val[0],dht11_val[1],dht11_val[2],dht11_val[3],farenheit);
-  }
+    // To manage MySQL inserts!
+    if (mysql_query(con, "INSERT INTO DHT11 VALUES(*temp*, *humi* , *time*, 'RPIBIO')")) {
+      finish_with_error(con);
+    }
+    //
+}
   else
     printf("Invalid Data!!\n");
 }
 
 int main(void)
 {
+  // To manage MySQL inserts!
+  if (con == NULL)
+  {
+    fprintf(stderr, "mysql_init() failed\n");
+    exit(1);
+  }
+  if (mysql_real_connect(con, "localhost", "root", "221186",
+                         "DHT11", 0, NULL, 0) == NULL)
+  {
+    finish_with_error(con);
+  }
+  //
   printf("Interfacing Temperature and Humidity Sensor (DHT11) With Raspberry Pi\n");
   if(wiringPiSetup()==-1)
     exit(1);
