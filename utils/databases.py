@@ -17,6 +17,7 @@ tables_creation_connection = mdb.connect('localhost', 'root', '221186', db_name)
 tables_creation_cursor = tables_creation_connection.cursor()
 tables_creation_sql = '''CREATE TABLE log (
        id INT PRIMARY KEY AUTO_INCREMENT,       
+       data TINYINT(1), # 0 if data is invalid, 1 if OK
        temp FLOAT(5,2),
        humi FLOAT(5,2),
        time DATETIME,
@@ -34,6 +35,7 @@ tables_creation_cursor.close()
 # | Field  | Type       | Null | Key | Default | Extra          |
 # +--------+------------+------+-----+---------+----------------+
 # | id     | int(11)    | NO   | PRI | NULL    | auto_increment |
+# | data   | tinyint(1) | YES  |     | NULL    |                |
 # | temp   | float(5,2) | YES  |     | NULL    |                |
 # | humi   | float(5,2) | YES  |     | NULL    |                |
 # | time   | datetime   | YES  |     | NULL    |                |

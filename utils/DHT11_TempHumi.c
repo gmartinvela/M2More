@@ -65,7 +65,7 @@ void dht11_read_val(MYSQL *con, char *timestamp, char *sql, char *sqlData)
   {
     //farenheit=dht11_val[2]*9./5.+32;
     //printf("Humidity = %d.%d %% Temperature = %d.%d *C (%.1f *F)\n",dht11_val[0],dht11_val[1],dht11_val[2],dht11_val[3],farenheit);
-    printf("Humidity = %d.%d %% Temperature = %d.%d *C\n",dht11_val[0],dht11_val[1],dht11_val[2],dht11_val[3]);
+    //printf("Humidity = %d.%d %% Temperature = %d.%d *C\n",dht11_val[0],dht11_val[1],dht11_val[2],dht11_val[3]);
     // To manage MySQL inserts!
 
     //char timestamp[50];
@@ -73,7 +73,7 @@ void dht11_read_val(MYSQL *con, char *timestamp, char *sql, char *sqlData)
     strftime (timestamp, 50, "%Y-%m-%d %H:%M", localtime (&now));
     //printf ("%s\n", timestamp);
 
-    strcpy(sql, "INSERT INTO log (temp, humi, time, device) VALUES (");
+    strcpy(sql, "INSERT INTO log (data, temp, humi, time, device) VALUES (1, ");
     sprintf(sqlData, "%d.%d", dht11_val[0],dht11_val[1]);
     strcat(sql, sqlData);
     strcpy(sqlData,", ");
@@ -89,17 +89,33 @@ void dht11_read_val(MYSQL *con, char *timestamp, char *sql, char *sqlData)
     sprintf(sqlData, DEVICE);
     strcat(sql, sqlData);
     strcpy(sqlData,"'); ");
-    strcat(sql,sqlData); 
-    printf ("%s\n", sql);
+    strcat(sql,sqlData);
+    //printf ("%s\n", sql);
 
     //if (mysql_query(con, "INSERT INTO log (temp, humi, time, device) VALUES (10.00, 37.00 , '2013-11-24 17:15:10', 'RPIBIO')")) {
     if (mysql_query(con, sql)) {
       finish_with_error(con);
     }
     //
-}
+  }
   else
-    printf("Invalid Data!!\n");
+  {
+    time_t now = time (0);
+    strftime (timestamp, 50, "%Y-%m-%d %H:%M", localtime (&now));
+    strcpy(sql, "INSERT INTO log (data, time, device) VALUES (0, '");
+    sprintf(sqlData, "%s", timestamp);
+    strcat(sql, sqlData);
+    strcpy(sqlData,"', '");
+    strcat(sql,sqlData);
+    sprintf(sqlData, DEVICE);
+    strcat(sql, sqlData);
+    strcpy(sqlData,"'); ");
+    strcat(sql,sqlData); 
+    if (mysql_query(con, sql)) {
+      finish_with_error(con);
+    }
+    //printf("Invalid Data!!\n");
+  }
 }
 
 int main(void)
@@ -121,13 +137,13 @@ int main(void)
     finish_with_error(con);
   }
   //
-  printf("Interfacing Temperature and Humidity Sensor (DHT11) With Raspberry Pi\n");
+  //printf("Interfacing DHT11 with RPi and save data to MySQL\n");
   if(wiringPiSetup()==-1)
     exit(1);
   while(1)
   {
     dht11_read_val(con, timestamp, sql, sqlData);
-    delay(3000);
+    delay(20000);
   }
   return 0;
 }
