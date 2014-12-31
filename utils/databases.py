@@ -26,3 +26,16 @@ tables_creation_sql = '''CREATE TABLE log (
 tables_creation_cursor.execute(tables_creation_sql)
 tables_creation_connection.close()
 tables_creation_cursor.close()
+
+# DESCRIBE log;
+
+#
+# +--------+------------+------+-----+---------+----------------+
+# | Field  | Type       | Null | Key | Default | Extra          |
+# +--------+------------+------+-----+---------+----------------+
+# | id     | int(11)    | NO   | PRI | NULL    | auto_increment |
+# | temp   | float(5,2) | YES  |     | NULL    |                |
+# | humi   | float(5,2) | YES  |     | NULL    |                |
+# | time   | datetime   | YES  |     | NULL    |                |
+# | device | char(50)   | YES  |     | NULL    |                |
+# +--------+------------+------+-----+---------+----------------+

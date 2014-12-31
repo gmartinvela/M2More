@@ -1,16 +1,19 @@
 #include <wiringPi.h>
+#include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdint.h>
 // To manage MySQL inserts!
 #include <my_global.h>
 #include <mysql.h>
+#include <time.h>
 //
 // GCC Command:
 // gcc -o DHT11_TempHumi DHT11_TempHumi_new.c -L/usr/local/lib -lwiringPi -I/usr/include/mysql `mysql_config --cflags --libs`
 //
 #define MAX_TIME 85
 #define DHT11PIN 7
+#define DEVICE "RPIBIO"
 
 int dht11_val[5]={0,0,0,0,0};
 
@@ -23,7 +26,7 @@ void finish_with_error(MYSQL *con)
 }
 //
 
-void dht11_read_val(MYSQL *con)
+void dht11_read_val(MYSQL *con, char *timestamp, char *sql, char *sqlData)
 {
   uint8_t lststate=HIGH;
   uint8_t counter=0;
@@ -60,10 +63,37 @@ void dht11_read_val(MYSQL *con)
   // verify cheksum and print the verified data
   if((j>=40)&&(dht11_val[4]==((dht11_val[0]+dht11_val[1]+dht11_val[2]+dht11_val[3])& 0xFF)))
   {
-    farenheit=dht11_val[2]*9./5.+32;
-    printf("Humidity = %d.%d %% Temperature = %d.%d *C (%.1f *F)\n",dht11_val[0],dht11_val[1],dht11_val[2],dht11_val[3],farenheit);
+    //farenheit=dht11_val[2]*9./5.+32;
+    //printf("Humidity = %d.%d %% Temperature = %d.%d *C (%.1f *F)\n",dht11_val[0],dht11_val[1],dht11_val[2],dht11_val[3],farenheit);
+    printf("Humidity = %d.%d %% Temperature = %d.%d *C\n",dht11_val[0],dht11_val[1],dht11_val[2],dht11_val[3]);
     // To manage MySQL inserts!
-    if (mysql_query(con, "INSERT INTO DHT11 VALUES(*temp*, *humi* , *time*, 'RPIBIO')")) {
+
+    //char timestamp[50];
+    time_t now = time (0);
+    strftime (timestamp, 50, "%Y-%m-%d %H:%M", localtime (&now));
+    //printf ("%s\n", timestamp);
+
+    strcpy(sql, "INSERT INTO log (temp, humi, time, device) VALUES (");
+    sprintf(sqlData, "%d.%d", dht11_val[0],dht11_val[1]);
+    strcat(sql, sqlData);
+    strcpy(sqlData,", ");
+    strcat(sql,sqlData);
+    sprintf(sqlData, "%d.%d", dht11_val[2],dht11_val[3]);
+    strcat(sql, sqlData);
+    strcpy(sqlData,", '");
+    strcat(sql,sqlData);
+    sprintf(sqlData, "%s", timestamp);
+    strcat(sql, sqlData);
+    strcpy(sqlData,"', '");
+    strcat(sql,sqlData);
+    sprintf(sqlData, DEVICE);
+    strcat(sql, sqlData);
+    strcpy(sqlData,"'); ");
+    strcat(sql,sqlData); 
+    printf ("%s\n", sql);
+
+    //if (mysql_query(con, "INSERT INTO log (temp, humi, time, device) VALUES (10.00, 37.00 , '2013-11-24 17:15:10', 'RPIBIO')")) {
+    if (mysql_query(con, sql)) {
       finish_with_error(con);
     }
     //
@@ -76,6 +106,9 @@ int main(void)
 {
   // To manage MySQL inserts!
   MYSQL *con = mysql_init(NULL);
+
+  char timestamp[50];
+  char sql[100],sqlData[30];
 
   if (con == NULL)
   {
@@ -93,7 +126,7 @@ int main(void)
     exit(1);
   while(1)
   {
-    dht11_read_val(con);
+    dht11_read_val(con, timestamp, sql, sqlData);
     delay(3000);
   }
   return 0;
