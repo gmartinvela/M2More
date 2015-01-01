@@ -6,6 +6,9 @@ import tornado.web
 import datetime
 import MySQLdb as mdb
 import json
+
+import RGB
+
 #con = mdb.connect('localhost', 'root', '221186', 'DHT11');
 #with con:
 #    cur = con.cursor()
@@ -29,7 +32,8 @@ class StatisticsHandler(tornado.web.RequestHandler):
             valids_number = cur.fetchone()
             valids_percent = (float(valids_number[0]) / float(rows_number[0]) * 100)
             invalids_percent = (float(invalids_number[0]) / float(rows_number[0]) * 100)
-            statistics_dict = [ { 'total':rows_number[0], 'valids':valids_number[0], 'invalids':invalids_number[0], '%valids':str(valids_percent) , '%invalids':str(invalids_percent)  } ]
+            statistics_dict = [ { 'total':rows_number[0], 'valids':valids_number[0], 
+                                  'invalids':invalids_number[0], '%valids':str(valids_percent) , '%invalids':str(invalids_percent)  } ]
             statistics_json = json.dumps(statistics_dict) 
             #self.write("<p>Statistics</p><p>Valid data: " + str(valids_percent)  + " %</p><p>Invalid data: " + str(invalids_percent)  + " %</p>")
             self.write(statistics_json)
@@ -38,7 +42,7 @@ class MainHandler(tornado.web.RequestHandler):
     def get(self):
         now = datetime.datetime.now()
         pretty_now = now.strftime("%d-%m-%Y %H:%M")
-        main_dict = [ { 'device':'RPi BILBAO', 'time': pretty_now } ]
+        main_dict = [ { 'device':'RPi Bilbao', 'time': pretty_now } ]
         main_json = json.dumps(main_dict)
         #self.write("<p>RPI Bilbao</p><p>" + pretty_now  + "</p>")
         self.write(main_json)
