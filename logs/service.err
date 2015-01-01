@@ -5,3 +5,231 @@ WARNING:tornado.access:404 GET /favicon.ico (81.45.53.235) 6.23ms
 WARNING:tornado.access:404 GET http://www.ly.com/ (182.254.158.222) 6.88ms
 WARNING:tornado.access:405 CONNECT mx3.mail2000.com.tw:25 (118.165.129.57) 6.65ms
 WARNING:tornado.access:404 GET /tmUnblock.cgi (203.128.72.202) 6.08ms
+  File "/home/pi/M2More/services.py", line 23
+    invalid_data = cur.execute(select count(*) from log where data = 0)
+                                          ^
+SyntaxError: invalid syntax
+  File "/home/pi/M2More/services.py", line 23
+    invalid_data = cur.execute(select count(*) from log where data = 0)
+                                          ^
+SyntaxError: invalid syntax
+  File "/home/pi/M2More/services.py", line 23
+    invalid_data = cur.execute(select count(*) from log where data = 0)
+                                          ^
+SyntaxError: invalid syntax
+  File "/home/pi/M2More/services.py", line 23
+    invalid_data = cur.execute(select count(*) from log where data = 0)
+                                          ^
+SyntaxError: invalid syntax
+  File "/home/pi/M2More/services.py", line 23
+    invalid_data = cur.execute(select count(*) from log where data = 0)
+                                          ^
+SyntaxError: invalid syntax
+  File "/home/pi/M2More/services.py", line 23
+    invalid_data = cur.execute(select count(*) from log where data = 0)
+                                          ^
+SyntaxError: invalid syntax
+  File "/home/pi/M2More/services.py", line 23
+    invalid_data = cur.execute(select count(*) from log where data = 0)
+                                          ^
+SyntaxError: invalid syntax
+  File "/home/pi/M2More/services.py", line 23
+    invalid_data = cur.execute(select count(*) from log where data = 0)
+                                          ^
+SyntaxError: invalid syntax
+  File "/home/pi/M2More/services.py", line 23
+    invalid_data = cur.execute(select count(*) from log where data = 0)
+                                          ^
+SyntaxError: invalid syntax
+  File "/home/pi/M2More/services.py", line 23
+    invalid_data = cur.execute(select count(*) from log where data = 0)
+                                          ^
+SyntaxError: invalid syntax
+  File "/home/pi/M2More/services.py", line 23
+    invalid_data = cur.execute(select count(*) from log where data = 0)
+                                          ^
+SyntaxError: invalid syntax
+WARNING:tornado.access:404 GET /favicon.ico (192.168.1.35) 6.59ms
+ERROR:tornado.application:Uncaught exception GET /statistics (192.168.1.35)
+HTTPServerRequest(protocol='http', host='192.168.1.50', method='GET', uri='/statistics', version='HTTP/1.1', remote_ip='192.168.1.35', headers={'Connection': 'keep-alive', 'Accept-Language': 'en-US,en;q=0.8,es;q=0.6', 'Accept-Encoding': 'gzip, deflate, sdch', 'Host': '192.168.1.50', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'User-Agent': 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36'})
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 1332, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/home/pi/M2More/services.py", line 21, in get
+    with con:
+NameError: global name 'con' is not defined
+ERROR:tornado.access:500 GET /statistics (192.168.1.35) 28.97ms
+ERROR:tornado.application:Uncaught exception GET /statistics (192.168.1.35)
+HTTPServerRequest(protocol='http', host='192.168.1.50', method='GET', uri='/statistics', version='HTTP/1.1', remote_ip='192.168.1.35', headers={'Connection': 'keep-alive', 'Accept-Language': 'en-US,en;q=0.8,es;q=0.6', 'Accept-Encoding': 'gzip, deflate, sdch', 'Cache-Control': 'max-age=0', 'Host': '192.168.1.50', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'User-Agent': 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36'})
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 1332, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/home/pi/M2More/services.py", line 26, in get
+    self.write("<p>Statistics</p><p>" + invalid_data  + " - " + valid_data  + "</p>")
+TypeError: cannot concatenate 'str' and 'long' objects
+ERROR:tornado.access:500 GET /statistics (192.168.1.35) 253.68ms
+ERROR:tornado.application:Uncaught exception GET /statistics (192.168.1.35)
+HTTPServerRequest(protocol='http', host='192.168.1.50', method='GET', uri='/statistics', version='HTTP/1.1', remote_ip='192.168.1.35', headers={'Connection': 'keep-alive', 'Accept-Language': 'en-US,en;q=0.8,es;q=0.6', 'Accept-Encoding': 'gzip, deflate, sdch', 'Cache-Control': 'max-age=0', 'Host': '192.168.1.50', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'User-Agent': 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36'})
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 1332, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/home/pi/M2More/services.py", line 26, in get
+    self.write("<p>Statistics</p><p>" + invalid_data  + " - " + valid_data  + "</p>")
+TypeError: cannot concatenate 'str' and 'long' objects
+ERROR:tornado.access:500 GET /statistics (192.168.1.35) 20.41ms
+ERROR:tornado.application:Uncaught exception GET /statistics (192.168.1.35)
+HTTPServerRequest(protocol='http', host='192.168.1.50', method='GET', uri='/statistics', version='HTTP/1.1', remote_ip='192.168.1.35', headers={'Connection': 'keep-alive', 'Accept-Language': 'en-US,en;q=0.8,es;q=0.6', 'Accept-Encoding': 'gzip, deflate, sdch', 'Cache-Control': 'max-age=0', 'Host': '192.168.1.50', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'User-Agent': 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36'})
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 1332, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/home/pi/M2More/services.py", line 26, in get
+    self.write("<p>Statistics</p><p>" + invalid_data  + " - " + valid_data  + "</p>")
+TypeError: cannot concatenate 'str' and 'long' objects
+ERROR:tornado.access:500 GET /statistics (192.168.1.35) 20.51ms
+WARNING:tornado.access:404 HEAD /robots.txt (81.38.212.120) 6.85ms
+WARNING:tornado.access:404 GET /aiai/aia/ai.php (123.57.78.112) 6.94ms
+WARNING:tornado.access:404 GET /phpMyAdmin/scripts/setup.php (123.57.78.112) 6.58ms
+WARNING:tornado.access:404 HEAD /robots.txt (81.38.212.120) 6.52ms
+WARNING:tornado.access:404 GET /tmUnblock.cgi (176.118.77.178) 6.15ms
+WARNING:tornado.access:404 GET /favicon.ico (192.168.1.33) 6.25ms
+WARNING:tornado.access:404 GET /stastistics (192.168.1.33) 6.16ms
+WARNING:tornado.access:404 GET /stastistic (192.168.1.33) 6.26ms
+ERROR:tornado.application:Uncaught exception GET /statistics (192.168.1.35)
+HTTPServerRequest(protocol='http', host='192.168.1.50', method='GET', uri='/statistics', version='HTTP/1.1', remote_ip='192.168.1.35', headers={'Connection': 'keep-alive', 'Accept-Language': 'en-US,en;q=0.8,es;q=0.6', 'Accept-Encoding': 'gzip, deflate, sdch', 'If-None-Match': '"95f74fd06af8588feb3be68920163af6aa915195"', 'Host': '192.168.1.50', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'User-Agent': 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36'})
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 1332, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/home/pi/M2More/services.py", line 25, in get
+    invalids_number = invalids.fetchone()
+AttributeError: 'long' object has no attribute 'fetchone'
+ERROR:tornado.access:500 GET /statistics (192.168.1.35) 197.92ms
+WARNING:tornado.access:404 GET /favicon.ico (192.168.1.35) 6.62ms
+ERROR:tornado.application:Uncaught exception GET /statistics (192.168.1.35)
+HTTPServerRequest(protocol='http', host='192.168.1.50', method='GET', uri='/statistics', version='HTTP/1.1', remote_ip='192.168.1.35', headers={'Connection': 'keep-alive', 'Accept-Language': 'en-US,en;q=0.8,es;q=0.6', 'Accept-Encoding': 'gzip, deflate, sdch', 'Cache-Control': 'max-age=0', 'Host': '192.168.1.50', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'User-Agent': 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36'})
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 1332, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/home/pi/M2More/services.py", line 28, in get
+    self.write("<p>Statistics</p><p>" + valids_number  + " - " + invalids_number  + "</p>")
+TypeError: cannot concatenate 'str' and 'tuple' objects
+ERROR:tornado.access:500 GET /statistics (192.168.1.35) 199.47ms
+ERROR:tornado.application:Uncaught exception GET /statistics (192.168.1.35)
+HTTPServerRequest(protocol='http', host='192.168.1.50', method='GET', uri='/statistics', version='HTTP/1.1', remote_ip='192.168.1.35', headers={'Connection': 'keep-alive', 'Accept-Language': 'en-US,en;q=0.8,es;q=0.6', 'Accept-Encoding': 'gzip, deflate, sdch', 'Cache-Control': 'max-age=0', 'Host': '192.168.1.50', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'User-Agent': 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36'})
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 1332, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/home/pi/M2More/services.py", line 28, in get
+    self.write("<p>Statistics</p><p>" + valids_number  + " - " + invalids_number  + "</p>")
+TypeError: cannot concatenate 'str' and 'tuple' objects
+ERROR:tornado.access:500 GET /statistics (192.168.1.35) 21.90ms
+ERROR:tornado.application:Uncaught exception GET /statistics (192.168.1.35)
+HTTPServerRequest(protocol='http', host='192.168.1.50', method='GET', uri='/statistics', version='HTTP/1.1', remote_ip='192.168.1.35', headers={'Accept-Language': 'en-US,en;q=0.8,es;q=0.6', 'Accept-Encoding': 'gzip, deflate, sdch', 'Host': '192.168.1.50', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'User-Agent': 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36', 'Connection': 'keep-alive', 'Cache-Control': 'max-age=0', 'If-None-Match': '"db91b877bf43cc4d731ec241061b5522150ed575"'})
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 1332, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/home/pi/M2More/services.py", line 28, in get
+    self.write("<p>Statistics</p><p>" + valids_number[0]  + " - " + invalids_number[0]  + "</p>")
+TypeError: cannot concatenate 'str' and 'long' objects
+ERROR:tornado.access:500 GET /statistics (192.168.1.35) 203.68ms
+ERROR:tornado.application:Uncaught exception GET /statistics (192.168.1.35)
+HTTPServerRequest(protocol='http', host='192.168.1.50', method='GET', uri='/statistics', version='HTTP/1.1', remote_ip='192.168.1.35', headers={'Connection': 'keep-alive', 'Accept-Language': 'en-US,en;q=0.8,es;q=0.6', 'Accept-Encoding': 'gzip, deflate, sdch', 'Cache-Control': 'max-age=0', 'Host': '192.168.1.50', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'User-Agent': 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36'})
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 1332, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/home/pi/M2More/services.py", line 28, in get
+    self.write("<p>Statistics</p><p>" + valids_number[0]  + " - " + invalids_number[0]  + "</p>")
+TypeError: cannot concatenate 'str' and 'long' objects
+ERROR:tornado.access:500 GET /statistics (192.168.1.35) 22.03ms
+ERROR:tornado.application:Uncaught exception GET /statistics (192.168.1.35)
+HTTPServerRequest(protocol='http', host='192.168.1.50', method='GET', uri='/statistics', version='HTTP/1.1', remote_ip='192.168.1.35', headers={'Connection': 'keep-alive', 'Accept-Language': 'en-US,en;q=0.8,es;q=0.6', 'Accept-Encoding': 'gzip, deflate, sdch', 'Cache-Control': 'max-age=0', 'Host': '192.168.1.50', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'User-Agent': 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36'})
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 1332, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/home/pi/M2More/services.py", line 28, in get
+    self.write("<p>Statistics</p><p>" + int(valids_number[0])  + " - " + int(invalids_number[0])  + "</p>")
+TypeError: cannot concatenate 'str' and 'int' objects
+ERROR:tornado.access:500 GET /statistics (192.168.1.35) 212.48ms
+ERROR:tornado.application:Uncaught exception GET /statistics (192.168.1.35)
+HTTPServerRequest(protocol='http', host='192.168.1.50', method='GET', uri='/statistics', version='HTTP/1.1', remote_ip='192.168.1.35', headers={'Connection': 'keep-alive', 'Accept-Language': 'en-US,en;q=0.8,es;q=0.6', 'Accept-Encoding': 'gzip, deflate, sdch', 'Cache-Control': 'max-age=0', 'Host': '192.168.1.50', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'User-Agent': 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36'})
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 1332, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/home/pi/M2More/services.py", line 28, in get
+    self.write("<p>Statistics</p><p>" + int(valids_number[0])  + " - " + int(invalids_number[0])  + "</p>")
+TypeError: cannot concatenate 'str' and 'int' objects
+ERROR:tornado.access:500 GET /statistics (192.168.1.35) 37.95ms
+ERROR:tornado.application:Uncaught exception GET /statistics (192.168.1.35)
+HTTPServerRequest(protocol='http', host='192.168.1.50', method='GET', uri='/statistics', version='HTTP/1.1', remote_ip='192.168.1.35', headers={'Accept-Language': 'en-US,en;q=0.8,es;q=0.6', 'Accept-Encoding': 'gzip, deflate, sdch', 'Host': '192.168.1.50', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'User-Agent': 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36', 'Connection': 'keep-alive', 'Cache-Control': 'max-age=0', 'If-None-Match': '"c96ac0f6bf5f2872c203caa4592161c21a4476c3"'})
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 1332, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/home/pi/M2More/services.py", line 32, in get
+    self.write("<p>Statistics</p><p>Valid data: " + valids_percent  + " %</p><p>Invalid data: " + invalids_percent  + " %</p>")
+TypeError: cannot concatenate 'str' and 'int' objects
+ERROR:tornado.access:500 GET /statistics (192.168.1.35) 204.20ms
+ERROR:tornado.application:Uncaught exception GET /statistics (192.168.1.35)
+HTTPServerRequest(protocol='http', host='192.168.1.50', method='GET', uri='/statistics', version='HTTP/1.1', remote_ip='192.168.1.35', headers={'Accept-Language': 'en-US,en;q=0.8,es;q=0.6', 'Accept-Encoding': 'gzip, deflate, sdch', 'Host': '192.168.1.50', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'User-Agent': 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36', 'Connection': 'keep-alive', 'Cache-Control': 'max-age=0', 'If-None-Match': '"ea62d3d6fd8783dbe82c1344ca0e4ba973a36136"'})
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 1332, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/home/pi/M2More/services.py", line 33, in get
+    self.write("<p>Statistics</p><p>Valid data: " + valids_percent  + " %</p><p>Invalid data: " + invalids_percent  + " %</p>")
+TypeError: cannot concatenate 'str' and 'float' objects
+ERROR:tornado.access:500 GET /statistics (192.168.1.35) 205.91ms
+ERROR:tornado.application:Uncaught exception GET /statistics (192.168.1.35)
+HTTPServerRequest(protocol='http', host='192.168.1.50', method='GET', uri='/statistics', version='HTTP/1.1', remote_ip='192.168.1.35', headers={'Connection': 'keep-alive', 'Accept-Language': 'en-US,en;q=0.8,es;q=0.6', 'Accept-Encoding': 'gzip, deflate, sdch', 'Cache-Control': 'max-age=0', 'Host': '192.168.1.50', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'User-Agent': 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36'})
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 1332, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/home/pi/M2More/services.py", line 33, in get
+    self.write("<p>Statistics</p><p>Valid data: " + valids_percent  + " %</p><p>Invalid data: " + invalids_percent  + " %</p>")
+TypeError: cannot concatenate 'str' and 'float' objects
+ERROR:tornado.access:500 GET /statistics (192.168.1.35) 21.26ms
+  File "/home/pi/M2More/services.py", line 30
+    valids_percent = (float(valids_number[0]) / float(rows_number[0])) * 100)
+                                                                            ^
+SyntaxError: invalid syntax
+  File "/home/pi/M2More/services.py", line 30
+    valids_percent = (float(valids_number[0]) / float(rows_number[0])) * 100)
+                                                                            ^
+SyntaxError: invalid syntax
+  File "/home/pi/M2More/services.py", line 30
+    valids_percent = (float(valids_number[0]) / float(rows_number[0])) * 100)
+                                                                            ^
+SyntaxError: invalid syntax
+  File "/home/pi/M2More/services.py", line 30
+    valids_percent = (float(valids_number[0]) / float(rows_number[0])) * 100)
+                                                                            ^
+SyntaxError: invalid syntax
+  File "/home/pi/M2More/services.py", line 30
+    valids_percent = (float(valids_number[0]) / float(rows_number[0])) * 100)
+                                                                            ^
+SyntaxError: invalid syntax
+  File "/home/pi/M2More/services.py", line 30
+    valids_percent = (float(valids_number[0]) / float(rows_number[0])) * 100)
+                                                                            ^
+SyntaxError: invalid syntax
+  File "/home/pi/M2More/services.py", line 30
+    valids_percent = (float(valids_number[0]) / float(rows_number[0])) * 100)
+                                                                            ^
+SyntaxError: invalid syntax
+  File "/home/pi/M2More/services.py", line 30
+    valids_percent = (float(valids_number[0]) / float(rows_number[0])) * 100)
+                                                                            ^
+SyntaxError: invalid syntax
+ERROR:tornado.application:Uncaught exception GET /statistics (192.168.1.35)
+HTTPServerRequest(protocol='http', host='192.168.1.50', method='GET', uri='/statistics', version='HTTP/1.1', remote_ip='192.168.1.35', headers={'Accept-Language': 'en-US,en;q=0.8,es;q=0.6', 'Accept-Encoding': 'gzip, deflate, sdch', 'Host': '192.168.1.50', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'User-Agent': 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36', 'Connection': 'keep-alive', 'Cache-Control': 'max-age=0', 'If-None-Match': '"f3c76917628726adfc66dfd28ec325ca1a8179a4"'})
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 1332, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/home/pi/M2More/services.py", line 34, in get
+    self.write(statistics_dict)
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 656, in write
+    raise TypeError("write() only accepts bytes, unicode, and dict objects")
+TypeError: write() only accepts bytes, unicode, and dict objects
+ERROR:tornado.access:500 GET /statistics (192.168.1.35) 207.35ms
+WARNING:tornado.access:404 GET http://s1.bdstatic.com/r/www/cache/static/home/img/logos/nuomi_ade5465d.png (125.64.35.68) 6.32ms
+WARNING:tornado.access:404 GET http://s1.bdstatic.com/r/www/cache/static/home/img/logos/nuomi_ade5465d.png (125.64.35.67) 6.29ms
+WARNING:tornado.access:404 POST //%63%67%69%2D%62%69%6E/%70%68%70?%2D%64+%61%6C%6C%6F%77%5F%75%72%6C%5F%69%6E%63%6C%75%64%65%3D%6F%6E+%2D%64+%73%61%66%65%5F%6D%6F%64%65%3D%6F%66%66+%2D%64+%73%75%68%6F%73%69%6E%2E%73%69%6D%75%6C%61%74%69%6F%6E%3D%6F%6E+%2D%64+%64%69%73%61%62%6C%65%5F%66%75%6E%63%74%69%6F%6E%73%3D%22%22+%2D%64+%6F%70%65%6E%5F%62%61%73%65%64%69%72%3D%6E%6F%6E%65+%2D%64+%61%75%74%6F%5F%70%72%65%70%65%6E%64%5F%66%69%6C%65%3D%70%68%70%3A%2F%2F%69%6E%70%75%74+%2D%64+%63%67%69%2E%66%6F%72%63%65%5F%72%65%64%69%72%65%63%74%3D%30+%2D%64+%63%67%69%2E%72%65%64%69%72%65%63%74%5F%73%74%61%74%75%73%5F%65%6E%76%3D%30+%2D%64+%61%75%74%6F%5F%70%72%65%70%65%6E%64%5F%66%69%6C%65%3D%70%68%70%3A%2F%2F%69%6E%70%75%74+%2D%6E (198.154.63.131) 11.70ms
+WARNING:tornado.access:404 GET /tmUnblock.cgi (149.129.135.107) 6.33ms
+WARNING:tornado.access:404 GET /actionnews/index/ (104.202.9.75) 6.78ms
