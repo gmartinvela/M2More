@@ -761,3 +761,62 @@ IndentationError: unexpected indent
     with con:    
     ^
 IndentationError: unexpected indent
+  File "/home/pi/M2More/services.py", line 47
+    with con:    
+    ^
+IndentationError: unexpected indent
+  File "/home/pi/M2More/services.py", line 47
+    with con:    
+    ^
+IndentationError: unexpected indent
+  File "/home/pi/M2More/services.py", line 47
+    with con:    
+    ^
+IndentationError: unexpected indent
+  File "/home/pi/M2More/services.py", line 47
+    with con:    
+    ^
+IndentationError: unexpected indent
+  File "/home/pi/M2More/services.py", line 84
+    dict = []
+    ^
+IndentationError: unexpected indent
+  File "/home/pi/M2More/services.py", line 84
+    dict = []
+    ^
+IndentationError: unexpected indent
+  File "/home/pi/M2More/services.py", line 84
+    dict = []
+    ^
+IndentationError: unexpected indent
+  File "/home/pi/M2More/services.py", line 84
+    dict = []
+    ^
+IndentationError: unexpected indent
+ERROR:tornado.application:Uncaught exception GET /data (88.31.193.13)
+HTTPServerRequest(protocol='http', host='rpibio.noip.me', method='GET', uri='/data', version='HTTP/1.1', remote_ip='88.31.193.13', headers={'Accept-Language': 'en-US,en;q=0.8,es;q=0.6', 'Accept-Encoding': 'gzip, deflate, sdch', 'Host': 'rpibio.noip.me', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'User-Agent': 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36', 'Connection': 'keep-alive', 'Cache-Control': 'max-age=43200', 'If-None-Match': '"fbb7ab97a8ed0aa23fe1a9ff0d26b669f95b1584"'})
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 1332, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/home/pi/M2More/services.py", line 85, in get
+    for row in rows:
+NameError: global name 'rows' is not defined
+ERROR:tornado.access:500 GET /data (88.31.193.13) 204.78ms
+ERROR:tornado.application:Uncaught exception GET /statistics (88.31.193.13)
+HTTPServerRequest(protocol='http', host='rpibio.noip.me', method='GET', uri='/statistics', version='HTTP/1.1', remote_ip='88.31.193.13', headers={'Accept-Language': 'en-US,en;q=0.8,es;q=0.6', 'Accept-Encoding': 'gzip, deflate, sdch', 'Host': 'rpibio.noip.me', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'User-Agent': 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36', 'Connection': 'keep-alive', 'Cache-Control': 'max-age=43200', 'If-None-Match': '"408d35291daad788e50eb54b45087f28d6339606"'})
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 1332, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/home/pi/M2More/services.py", line 60, in get
+    "SELECT COUNT(*) FROM log WHERE data = 1"], ["ONE", "ONE", "ONE"])
+ValueError: need more than 1 value to unpack
+ERROR:tornado.access:500 GET /statistics (88.31.193.13) 32.86ms
+ERROR:tornado.application:Uncaught exception GET /data (88.31.193.13)
+HTTPServerRequest(protocol='http', host='rpibio.noip.me', method='GET', uri='/data', version='HTTP/1.1', remote_ip='88.31.193.13', headers={'Accept-Language': 'en-US,en;q=0.8,es;q=0.6', 'Accept-Encoding': 'gzip, deflate, sdch', 'Host': 'rpibio.noip.me', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'User-Agent': 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36', 'Connection': 'keep-alive', 'Cache-Control': 'max-age=43200', 'If-None-Match': '"587e34178722c75d2bf16072aff7721d500e06ac"'})
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 1332, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/home/pi/M2More/services.py", line 82, in get
+    for row in rows[0]:
+NameError: global name 'rows' is not defined
+ERROR:tornado.access:500 GET /data (88.31.193.13) 36.61ms

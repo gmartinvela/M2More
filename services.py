@@ -7,7 +7,7 @@ import datetime
 import MySQLdb as mdb
 import json
 import time
-from collections import OrderedDict
+#from collections import OrderedDict
 
 import RGB
 
@@ -39,49 +39,37 @@ def dict_to_json(dict):
     json_dict = json.dumps(results_dict, indent = 4, separators=(',', ': '), sort_keys=True)
     return json_dict
 
-#def query_DB(queries, query_types):
-#    ''' Query to database and return a dictionnary with the rows
-#        - query: list of strings with the complete SQL query 
-#        - result: list with ONE if the query is for a result or ALL for multiple results '''
-#    con = database_connect()
-#        with con:    
-#            for (query, query_type) in zip(queries, query_types):
-#                cur = con.cursor()
-#                cur.execute(query)
-#                if query_type == "ONE":                
-#                    rows = cur.fetchone()
-#                else:
-#                    rows = cur.fetchall()
+def query_DB(queries, query_types):
+    ''' Query to database and return a list with the rows directly from cursor
+        - query: list of strings with the complete SQL query 
+        - result: list with ONE if the query is for a result or ALL for multiple results '''
+    con = database_connect()
+    rows_list = []
+    with con:    
+        for (query, query_type) in zip(queries, query_types):
+            cur = con.cursor()
+            cur.execute(query)
+            if query_type == "ONE":                
+                rows = cur.fetchone()
+            else:
+                rows = cur.fetchall()
+            rows_list.append(rows)
+    return rows_list
 
 class StatisticsHandler(tornado.web.RequestHandler):
     def get(self):
-        con = database_connect()        
-        with con:    
-            cur = con.cursor()
-            rows = cur.execute("SELECT COUNT(*) FROM log")
-            rows_number = cur.fetchone()
-            invalids = cur.execute("SELECT COUNT(*) FROM log WHERE data = 0")
-            invalids_number = cur.fetchone()            
-            valids = cur.execute("SELECT COUNT(*) FROM log WHERE data = 1")
-            valids_number = cur.fetchone()
-        #valids_percent = (float(valids_number[0]) / float(rows_number[0]) * 100)
-        #invalids_percent = (float(invalids_number[0]) / float(rows_number[0]) * 100)
-        dict = [{ 'total':rows_number[0], 'valids':valids_number[0], 
-                  'invalids':invalids_number[0] }]
+        rows_list = query_DB(["SELECT COUNT(*) FROM log", "SELECT COUNT(*) FROM log WHERE data = 0", 
+                              "SELECT COUNT(*) FROM log WHERE data = 1"], ["ONE", "ONE", "ONE"])
+        dict = [{ 'total':rows_list[0][0], 'valids':rows_list[1][0], 'invalids':rows_list[2][0] }]
         json_dict = dict_to_json(dict) 
         self.write(json_dict)
 
 class DataHandler(tornado.web.RequestHandler):
     def get(self):
-        con = database_connect()
-        with con:
-            cur = con.cursor()
-            # TODO: Only the time will be DISTINCT
-            cur.execute("SELECT time, temp, humi FROM log WHERE data = 1 GROUP BY time ORDER BY time")
-            rows = cur.fetchall()
-            dict = []
-            for row in rows:
-                dict.append({ 'time':row[0].strftime("%d-%m-%Y %H:%M"), 'humi':row[1], 'temp':row[2]})
+        rows_list = query_DB(["SELECT time, temp, humi FROM log WHERE data = 1 GROUP BY time ORDER BY time"], ["ALL"])
+        dict = []
+        for row in rows_list[0]:
+            dict.append({ 'time':row[0].strftime("%d-%m-%Y %H:%M"), 'humi':row[1], 'temp':row[2]})
         json_dict = dict_to_json(dict)
         self.write(json_dict)
 
