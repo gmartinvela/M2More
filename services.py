@@ -51,10 +51,12 @@ class DataHandler(tornado.web.RequestHandler):
         con = database_connect()
         with con:
             cur = con.cursor()
-            rows = cur.execute("SELECT DISTINCT time, temp, humi  FROM log WHERE data = 1 ORDER BY time")
-            data = cur.fetchall()
-	# TODO: Data to string is not the better solution!
-        data_json = json.dumps(str(data), sort_keys=True)
+            cur.execute("SELECT DISTINCT time, temp, humi  FROM log WHERE data = 1 ORDER BY time")
+            rows = cur.fetchall()
+            data_dict = []
+            for row in rows:
+                data_dict.append({ 'time':row[0].strftime("%d-%m-%Y %H:%M"), 'temp':row[1], 'humi':row[2]})
+        data_json = json.dumps(data_dict, sort_keys=True)
         self.write(data_json)
 
 class MainHandler(tornado.web.RequestHandler):
