@@ -257,3 +257,424 @@ WARNING:tornado.access:404 GET /pma/scripts/setup.php (176.44.33.6) 6.93ms
 WARNING:tornado.access:404 GET /myadmin/scripts/setup.php (176.44.33.6) 6.80ms
 WARNING:tornado.access:404 GET /favicon.ico (212.55.21.48) 6.09ms
 WARNING:tornado.access:404 GET /favicon.ico (212.55.21.48) 6.27ms
+ERROR:tornado.application:Uncaught exception GET /statistics (212.55.21.48)
+HTTPServerRequest(protocol='http', host='rpibio.noip.me', method='GET', uri='/statistics', version='HTTP/1.1', remote_ip='212.55.21.48', headers={'Connection': 'keep-alive', 'Accept-Language': 'en-US,en;q=0.8,es;q=0.6', 'Accept-Encoding': 'gzip, deflate, sdch', 'Host': 'rpibio.noip.me', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'User-Agent': 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36'})
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 1332, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/home/pi/M2More/services.py", line 33, in get
+    with con:
+NameError: global name 'con' is not defined
+ERROR:tornado.access:500 GET /statistics (212.55.21.48) 241.84ms
+ERROR:tornado.application:Uncaught exception GET /statistics (212.55.21.48)
+HTTPServerRequest(protocol='http', host='rpibio.noip.me', method='GET', uri='/statistics', version='HTTP/1.1', remote_ip='212.55.21.48', headers={'Connection': 'keep-alive', 'Accept-Language': 'en-US,en;q=0.8,es;q=0.6', 'Accept-Encoding': 'gzip, deflate, sdch', 'Cache-Control': 'max-age=0', 'Host': 'rpibio.noip.me', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'User-Agent': 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36'})
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 1332, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/home/pi/M2More/services.py", line 33, in get
+    con = database_connect(connection)
+NameError: global name 'connection' is not defined
+ERROR:tornado.access:500 GET /statistics (212.55.21.48) 26.60ms
+ERROR:tornado.application:Uncaught exception GET /statistics (212.55.21.48)
+HTTPServerRequest(protocol='http', host='rpibio.noip.me', method='GET', uri='/statistics', version='HTTP/1.1', remote_ip='212.55.21.48', headers={'Connection': 'keep-alive', 'Accept-Language': 'en-US,en;q=0.8,es;q=0.6', 'Accept-Encoding': 'gzip, deflate, sdch', 'Cache-Control': 'max-age=0', 'Host': 'rpibio.noip.me', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'User-Agent': 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36'})
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 1332, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/home/pi/M2More/services.py", line 33, in get
+    con = database_connect(connection)
+NameError: global name 'connection' is not defined
+ERROR:tornado.access:500 GET /statistics (212.55.21.48) 12.04ms
+ERROR:tornado.application:Uncaught exception GET /statistics (212.55.21.48)
+HTTPServerRequest(protocol='http', host='rpibio.noip.me', method='GET', uri='/statistics', version='HTTP/1.1', remote_ip='212.55.21.48', headers={'Connection': 'keep-alive', 'Accept-Language': 'en-US,en;q=0.8,es;q=0.6', 'Accept-Encoding': 'gzip, deflate, sdch', 'Cache-Control': 'max-age=0', 'Host': 'rpibio.noip.me', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'User-Agent': 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36'})
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 1332, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/home/pi/M2More/services.py", line 33, in get
+    con = database_connect(connection)
+NameError: global name 'connection' is not defined
+ERROR:tornado.access:500 GET /statistics (212.55.21.48) 11.99ms
+Traceback (most recent call last):
+  File "/home/pi/M2More/services.py", line 73, in <module>
+    RGB.activate(RGB_BLUE)
+NameError: name 'RGB_BLUE' is not defined
+Traceback (most recent call last):
+  File "/home/pi/M2More/services.py", line 73, in <module>
+    RGB.activate(RGB_BLUE)
+NameError: name 'RGB_BLUE' is not defined
+Traceback (most recent call last):
+  File "/home/pi/M2More/services.py", line 73, in <module>
+    RGB.activate(RGB_BLUE)
+NameError: name 'RGB_BLUE' is not defined
+Traceback (most recent call last):
+  File "/home/pi/M2More/services.py", line 73, in <module>
+    RGB.activate(RGB_BLUE)
+NameError: name 'RGB_BLUE' is not defined
+Traceback (most recent call last):
+  File "/home/pi/M2More/services.py", line 73, in <module>
+    RGB.activate(RGB_BLUE)
+NameError: name 'RGB_BLUE' is not defined
+Traceback (most recent call last):
+  File "/home/pi/M2More/services.py", line 73, in <module>
+    RGB.activate(RGB_BLUE)
+NameError: name 'RGB_BLUE' is not defined
+Traceback (most recent call last):
+  File "/home/pi/M2More/services.py", line 73, in <module>
+    RGB.activate(RGB_BLUE)
+NameError: name 'RGB_BLUE' is not defined
+Traceback (most recent call last):
+  File "/home/pi/M2More/services.py", line 73, in <module>
+    RGB.activate(RGB_BLUE)
+NameError: name 'RGB_BLUE' is not defined
+Traceback (most recent call last):
+  File "/home/pi/M2More/services.py", line 73, in <module>
+    RGB.activate(RGB_BLUE)
+NameError: name 'RGB_BLUE' is not defined
+Traceback (most recent call last):
+  File "/home/pi/M2More/services.py", line 73, in <module>
+    RGB.activate(RGB_BLUE)
+NameError: name 'RGB_BLUE' is not defined
+Traceback (most recent call last):
+  File "/home/pi/M2More/services.py", line 73, in <module>
+    RGB.activate(RGB_BLUE)
+NameError: name 'RGB_BLUE' is not defined
+Traceback (most recent call last):
+  File "/home/pi/M2More/services.py", line 73, in <module>
+    RGB.activate(RGB_BLUE)
+NameError: name 'RGB_BLUE' is not defined
+Traceback (most recent call last):
+  File "/home/pi/M2More/services.py", line 73, in <module>
+    RGB.activate(RGB_BLUE)
+NameError: name 'RGB_BLUE' is not defined
+Traceback (most recent call last):
+  File "/home/pi/M2More/services.py", line 73, in <module>
+    RGB.activate(RGB_BLUE)
+NameError: name 'RGB_BLUE' is not defined
+Traceback (most recent call last):
+  File "/home/pi/M2More/services.py", line 73, in <module>
+    RGB.activate(RGB_BLUE)
+NameError: name 'RGB_BLUE' is not defined
+Traceback (most recent call last):
+  File "/home/pi/M2More/services.py", line 73, in <module>
+    RGB.activate(RGB_BLUE)
+NameError: name 'RGB_BLUE' is not defined
+Traceback (most recent call last):
+  File "/home/pi/M2More/services.py", line 73, in <module>
+    RGB.activate(RGB_BLUE)
+NameError: name 'RGB_BLUE' is not defined
+Traceback (most recent call last):
+  File "/home/pi/M2More/services.py", line 73, in <module>
+    RGB.activate(RGB_BLUE)
+NameError: name 'RGB_BLUE' is not defined
+Traceback (most recent call last):
+  File "/home/pi/M2More/services.py", line 73, in <module>
+    RGB.activate(RGB_BLUE)
+NameError: name 'RGB_BLUE' is not defined
+Traceback (most recent call last):
+  File "/home/pi/M2More/services.py", line 73, in <module>
+    RGB.activate(RGB_BLUE)
+NameError: name 'RGB_BLUE' is not defined
+Traceback (most recent call last):
+  File "/home/pi/M2More/services.py", line 73, in <module>
+    RGB.activate(RGB_BLUE)
+NameError: name 'RGB_BLUE' is not defined
+Traceback (most recent call last):
+  File "/home/pi/M2More/services.py", line 73, in <module>
+    RGB.activate(RGB_BLUE)
+NameError: name 'RGB_BLUE' is not defined
+Traceback (most recent call last):
+  File "/home/pi/M2More/services.py", line 73, in <module>
+    RGB.activate(RGB_BLUE)
+NameError: name 'RGB_BLUE' is not defined
+Traceback (most recent call last):
+  File "/home/pi/M2More/services.py", line 73, in <module>
+    RGB.activate(RGB_BLUE)
+NameError: name 'RGB_BLUE' is not defined
+Traceback (most recent call last):
+  File "/home/pi/M2More/services.py", line 73, in <module>
+    RGB.activate(RGB_BLUE)
+NameError: name 'RGB_BLUE' is not defined
+Traceback (most recent call last):
+  File "/home/pi/M2More/services.py", line 73, in <module>
+    RGB.activate(RGB_BLUE)
+NameError: name 'RGB_BLUE' is not defined
+Traceback (most recent call last):
+  File "/home/pi/M2More/services.py", line 73, in <module>
+    RGB.activate(RGB_BLUE)
+NameError: name 'RGB_BLUE' is not defined
+Traceback (most recent call last):
+  File "/home/pi/M2More/services.py", line 73, in <module>
+    RGB.activate(RGB_BLUE)
+NameError: name 'RGB_BLUE' is not defined
+Traceback (most recent call last):
+  File "/home/pi/M2More/services.py", line 73, in <module>
+    RGB.activate(RGB_BLUE)
+NameError: name 'RGB_BLUE' is not defined
+Traceback (most recent call last):
+  File "/home/pi/M2More/services.py", line 73, in <module>
+    RGB.activate(RGB_BLUE)
+NameError: name 'RGB_BLUE' is not defined
+Traceback (most recent call last):
+  File "/home/pi/M2More/services.py", line 73, in <module>
+    RGB.activate(RGB_BLUE)
+NameError: name 'RGB_BLUE' is not defined
+Traceback (most recent call last):
+  File "/home/pi/M2More/services.py", line 73, in <module>
+    RGB.activate(RGB_BLUE)
+NameError: name 'RGB_BLUE' is not defined
+Traceback (most recent call last):
+  File "/home/pi/M2More/services.py", line 74, in <module>
+    sleep(1)
+NameError: name 'sleep' is not defined
+Traceback (most recent call last):
+  File "/home/pi/M2More/services.py", line 74, in <module>
+    sleep(1)
+NameError: name 'sleep' is not defined
+Traceback (most recent call last):
+  File "/home/pi/M2More/services.py", line 74, in <module>
+    sleep(1)
+NameError: name 'sleep' is not defined
+Traceback (most recent call last):
+  File "/home/pi/M2More/services.py", line 74, in <module>
+    sleep(1)
+NameError: name 'sleep' is not defined
+Traceback (most recent call last):
+  File "/home/pi/M2More/services.py", line 74, in <module>
+    sleep(1)
+NameError: name 'sleep' is not defined
+Traceback (most recent call last):
+  File "/home/pi/M2More/services.py", line 74, in <module>
+    sleep(1)
+NameError: name 'sleep' is not defined
+Traceback (most recent call last):
+  File "/home/pi/M2More/services.py", line 74, in <module>
+    sleep(1)
+NameError: name 'sleep' is not defined
+Traceback (most recent call last):
+  File "/home/pi/M2More/services.py", line 74, in <module>
+    sleep(1)
+NameError: name 'sleep' is not defined
+Traceback (most recent call last):
+  File "/home/pi/M2More/services.py", line 74, in <module>
+    sleep(1)
+NameError: name 'sleep' is not defined
+Traceback (most recent call last):
+  File "/home/pi/M2More/services.py", line 74, in <module>
+    sleep(1)
+NameError: name 'sleep' is not defined
+Traceback (most recent call last):
+  File "/home/pi/M2More/services.py", line 74, in <module>
+    sleep(1)
+NameError: name 'sleep' is not defined
+Traceback (most recent call last):
+  File "/home/pi/M2More/services.py", line 74, in <module>
+    sleep(1)
+NameError: name 'sleep' is not defined
+Traceback (most recent call last):
+  File "/home/pi/M2More/services.py", line 74, in <module>
+    sleep(1)
+NameError: name 'sleep' is not defined
+Traceback (most recent call last):
+  File "/home/pi/M2More/services.py", line 74, in <module>
+    sleep(1)
+NameError: name 'sleep' is not defined
+Traceback (most recent call last):
+  File "/home/pi/M2More/services.py", line 74, in <module>
+    sleep(1)
+NameError: name 'sleep' is not defined
+Traceback (most recent call last):
+  File "/home/pi/M2More/services.py", line 74, in <module>
+    sleep(1)
+NameError: name 'sleep' is not defined
+Traceback (most recent call last):
+  File "/home/pi/M2More/services.py", line 74, in <module>
+    sleep(1)
+NameError: name 'sleep' is not defined
+Traceback (most recent call last):
+  File "/home/pi/M2More/services.py", line 74, in <module>
+    sleep(1)
+NameError: name 'sleep' is not defined
+Traceback (most recent call last):
+  File "/home/pi/M2More/services.py", line 74, in <module>
+    sleep(1)
+NameError: name 'sleep' is not defined
+Traceback (most recent call last):
+  File "/home/pi/M2More/services.py", line 74, in <module>
+    sleep(1)
+NameError: name 'sleep' is not defined
+Traceback (most recent call last):
+  File "/home/pi/M2More/services.py", line 74, in <module>
+    sleep(1)
+NameError: name 'sleep' is not defined
+Traceback (most recent call last):
+  File "/home/pi/M2More/services.py", line 74, in <module>
+    sleep(1)
+NameError: name 'sleep' is not defined
+Traceback (most recent call last):
+  File "/home/pi/M2More/services.py", line 74, in <module>
+    sleep(1)
+NameError: name 'sleep' is not defined
+Traceback (most recent call last):
+  File "/home/pi/M2More/services.py", line 74, in <module>
+    sleep(1)
+NameError: name 'sleep' is not defined
+Traceback (most recent call last):
+  File "/home/pi/M2More/services.py", line 74, in <module>
+    sleep(1)
+NameError: name 'sleep' is not defined
+Traceback (most recent call last):
+  File "/home/pi/M2More/services.py", line 74, in <module>
+    sleep(1)
+NameError: name 'sleep' is not defined
+Traceback (most recent call last):
+  File "/home/pi/M2More/services.py", line 74, in <module>
+    sleep(1)
+NameError: name 'sleep' is not defined
+Traceback (most recent call last):
+  File "/home/pi/M2More/services.py", line 74, in <module>
+    sleep(1)
+NameError: name 'sleep' is not defined
+Traceback (most recent call last):
+  File "/home/pi/M2More/services.py", line 74, in <module>
+    sleep(1)
+NameError: name 'sleep' is not defined
+Traceback (most recent call last):
+  File "/home/pi/M2More/services.py", line 74, in <module>
+    sleep(1)
+NameError: name 'sleep' is not defined
+Traceback (most recent call last):
+  File "/home/pi/M2More/services.py", line 74, in <module>
+    sleep(1)
+NameError: name 'sleep' is not defined
+Traceback (most recent call last):
+  File "/home/pi/M2More/services.py", line 74, in <module>
+    sleep(1)
+NameError: name 'sleep' is not defined
+Traceback (most recent call last):
+  File "/home/pi/M2More/services.py", line 74, in <module>
+    RGB.activate(RGB.RGB_BLUE)
+NameError: name 'sleep' is not defined
+WARNING:tornado.access:404 GET /favicon.ico (66.249.81.169) 6.46ms
+Traceback (most recent call last):
+  File "/home/pi/M2More/services.py", line 48, in <module>
+    class DataHandler(tornado.we.RequestHandler):
+AttributeError: 'module' object has no attribute 'we'
+Traceback (most recent call last):
+  File "/home/pi/M2More/services.py", line 48, in <module>
+    class DataHandler(tornado.we.RequestHandler):
+AttributeError: 'module' object has no attribute 'we'
+Traceback (most recent call last):
+  File "/home/pi/M2More/services.py", line 48, in <module>
+    class DataHandler(tornado.we.RequestHandler):
+AttributeError: 'module' object has no attribute 'we'
+Traceback (most recent call last):
+  File "/home/pi/M2More/services.py", line 48, in <module>
+    class DataHandler(tornado.we.RequestHandler):
+AttributeError: 'module' object has no attribute 'we'
+Traceback (most recent call last):
+  File "/home/pi/M2More/services.py", line 48, in <module>
+    class DataHandler(tornado.we.RequestHandler):
+AttributeError: 'module' object has no attribute 'we'
+Traceback (most recent call last):
+  File "/home/pi/M2More/services.py", line 48, in <module>
+    class DataHandler(tornado.we.RequestHandler):
+AttributeError: 'module' object has no attribute 'we'
+Traceback (most recent call last):
+  File "/home/pi/M2More/services.py", line 48, in <module>
+    class DataHandler(tornado.we.RequestHandler):
+AttributeError: 'module' object has no attribute 'we'
+Traceback (most recent call last):
+  File "/home/pi/M2More/services.py", line 48, in <module>
+    class DataHandler(tornado.we.RequestHandler):
+AttributeError: 'module' object has no attribute 'we'
+Traceback (most recent call last):
+  File "/home/pi/M2More/services.py", line 48, in <module>
+    class DataHandler(tornado.we.RequestHandler):
+AttributeError: 'module' object has no attribute 'we'
+Traceback (most recent call last):
+  File "/home/pi/M2More/services.py", line 48, in <module>
+    class DataHandler(tornado.we.RequestHandler):
+AttributeError: 'module' object has no attribute 'we'
+Traceback (most recent call last):
+  File "/home/pi/M2More/services.py", line 48, in <module>
+    class DataHandler(tornado.we.RequestHandler):
+AttributeError: 'module' object has no attribute 'we'
+Traceback (most recent call last):
+  File "/home/pi/M2More/services.py", line 48, in <module>
+    class DataHandler(tornado.we.RequestHandler):
+AttributeError: 'module' object has no attribute 'we'
+Traceback (most recent call last):
+  File "/home/pi/M2More/services.py", line 48, in <module>
+    class DataHandler(tornado.we.RequestHandler):
+AttributeError: 'module' object has no attribute 'we'
+Traceback (most recent call last):
+  File "/home/pi/M2More/services.py", line 48, in <module>
+    class DataHandler(tornado.we.RequestHandler):
+AttributeError: 'module' object has no attribute 'we'
+Traceback (most recent call last):
+  File "/home/pi/M2More/services.py", line 48, in <module>
+    class DataHandler(tornado.we.RequestHandler):
+AttributeError: 'module' object has no attribute 'we'
+Traceback (most recent call last):
+  File "/home/pi/M2More/services.py", line 48, in <module>
+    class DataHandler(tornado.we.RequestHandler):
+AttributeError: 'module' object has no attribute 'we'
+ERROR:tornado.application:Uncaught exception GET /data (212.55.21.48)
+HTTPServerRequest(protocol='http', host='rpibio.noip.me', method='GET', uri='/data', version='HTTP/1.1', remote_ip='212.55.21.48', headers={'Accept-Language': 'en-US,en;q=0.8,es;q=0.6', 'Accept-Encoding': 'gzip, deflate, sdch', 'Host': 'rpibio.noip.me', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'User-Agent': 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36', 'Connection': 'keep-alive', 'Cache-Control': 'max-age=0', 'If-None-Match': '"df28c41485a3ec8e5ec4f847e5e9634059b7774a"'})
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 1332, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/home/pi/M2More/services.py", line 51, in get
+    with row:
+NameError: global name 'row' is not defined
+ERROR:tornado.access:500 GET /data (212.55.21.48) 205.52ms
+ERROR:tornado.application:Uncaught exception GET /data (212.55.21.48)
+HTTPServerRequest(protocol='http', host='rpibio.noip.me', method='GET', uri='/data', version='HTTP/1.1', remote_ip='212.55.21.48', headers={'Connection': 'keep-alive', 'Accept-Language': 'en-US,en;q=0.8,es;q=0.6', 'Accept-Encoding': 'gzip, deflate, sdch', 'Host': 'rpibio.noip.me', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'User-Agent': 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36'})
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 1332, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/home/pi/M2More/services.py", line 55, in get
+    data_json = json.dumps(data)
+  File "/usr/lib/python2.7/json/__init__.py", line 231, in dumps
+    return _default_encoder.encode(obj)
+  File "/usr/lib/python2.7/json/encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/lib/python2.7/json/encoder.py", line 263, in iterencode
+    return _iterencode(o, 0)
+  File "/usr/lib/python2.7/json/encoder.py", line 177, in default
+    raise TypeError(repr(o) + " is not JSON serializable")
+TypeError: datetime.datetime(2014, 12, 31, 21, 4) is not JSON serializable
+ERROR:tornado.access:500 GET /data (212.55.21.48) 221.02ms
+ERROR:tornado.application:Uncaught exception GET /statistics (212.55.21.48)
+HTTPServerRequest(protocol='http', host='rpibio.noip.me', method='GET', uri='/statistics', version='HTTP/1.1', remote_ip='212.55.21.48', headers={'Accept-Language': 'en-US,en;q=0.8,es;q=0.6', 'Accept-Encoding': 'gzip, deflate, sdch', 'Host': 'rpibio.noip.me', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'User-Agent': 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36', 'Connection': 'keep-alive', 'Cache-Control': 'max-age=0', 'If-None-Match': '"df28c41485a3ec8e5ec4f847e5e9634059b7774a"'})
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 1332, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/home/pi/M2More/services.py", line 46, in get
+    self.write(statistics_json, indent = 2, separators=(',', ': '))
+TypeError: write() got an unexpected keyword argument 'indent'
+ERROR:tornado.access:500 GET /statistics (212.55.21.48) 211.89ms
+ERROR:tornado.application:Uncaught exception GET /statistics (212.55.21.48)
+HTTPServerRequest(protocol='http', host='rpibio.noip.me', method='GET', uri='/statistics', version='HTTP/1.1', remote_ip='212.55.21.48', headers={'Connection': 'keep-alive', 'Accept-Language': 'en-US,en;q=0.8,es;q=0.6', 'Accept-Encoding': 'gzip, deflate, sdch', 'Cache-Control': 'max-age=0', 'Host': 'rpibio.noip.me', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'User-Agent': 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36'})
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 1332, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/home/pi/M2More/services.py", line 46, in get
+    self.write(statistics_json, indent = 2, separators=(',', ': '))
+TypeError: write() got an unexpected keyword argument 'indent'
+ERROR:tornado.access:500 GET /statistics (212.55.21.48) 26.29ms
+  File "/home/pi/M2More/services.py", line 45
+    statistics_json = json.dumps(statistics_dict, indent = 2, separators=(',', ': '), , sort_keys=True) 
+                                                                                      ^
+SyntaxError: invalid syntax
+  File "/home/pi/M2More/services.py", line 45
+    statistics_json = json.dumps(statistics_dict, indent = 2, separators=(',', ': '), , sort_keys=True) 
+                                                                                      ^
+SyntaxError: invalid syntax
+  File "/home/pi/M2More/services.py", line 45
+    statistics_json = json.dumps(statistics_dict, indent = 2, separators=(',', ': '), , sort_keys=True) 
+                                                                                      ^
+SyntaxError: invalid syntax
+  File "/home/pi/M2More/services.py", line 45
+    statistics_json = json.dumps(statistics_dict, indent = 2, separators=(',', ': '), , sort_keys=True) 
+                                                                                      ^
+SyntaxError: invalid syntax
