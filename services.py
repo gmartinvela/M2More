@@ -11,6 +11,12 @@ from collections import OrderedDict
 
 import RGB
 
+# Global variables
+VERSION = "0.1"
+SW_NAME = "M2More"
+AUTHOR = "Gustavo Martin Vela"
+DEVICE = "RPi Bilbao"
+
 def start_RGB():
     ''' Configure the GPIO 11, 13 and 15 to manage the RGB LED'''
     RGB.setup()
@@ -27,9 +33,28 @@ def normalized_datetime():
     pretty_now = now.strftime("%d-%m-%Y %H:%M")
     return pretty_now
 
+def dict_to_json(dict):
+    normalized_now = normalized_datetime()
+    results_dict = {'results': dict, 'datetime': normalized_now}
+    json_dict = json.dumps(results_dict, indent = 4, separators=(',', ': '), sort_keys=True)
+    return json_dict
+
+#def query_DB(queries, query_types):
+#    ''' Query to database and return a dictionnary with the rows
+#        - query: list of strings with the complete SQL query 
+#        - result: list with ONE if the query is for a result or ALL for multiple results '''
+#    con = database_connect()
+#        with con:    
+#            for (query, query_type) in zip(queries, query_types):
+#                cur = con.cursor()
+#                cur.execute(query)
+#                if query_type == "ONE":                
+#                    rows = cur.fetchone()
+#                else:
+#                    rows = cur.fetchall()
+
 class StatisticsHandler(tornado.web.RequestHandler):
     def get(self):
-        pretty_now = normalized_datetime()
         con = database_connect()        
         with con:    
             cur = con.cursor()
@@ -41,30 +66,30 @@ class StatisticsHandler(tornado.web.RequestHandler):
             valids_number = cur.fetchone()
         #valids_percent = (float(valids_number[0]) / float(rows_number[0]) * 100)
         #invalids_percent = (float(invalids_number[0]) / float(rows_number[0]) * 100)
-        statistics_dict = [ { 'total':rows_number[0], 'valids':valids_number[0], 
-                              'invalids':invalids_number[0], 'time': pretty_now } ]
-        statistics_json = json.dumps(statistics_dict, indent = 4, separators=(',', ': '), sort_keys=True) 
-        self.write(statistics_json)
+        dict = [{ 'total':rows_number[0], 'valids':valids_number[0], 
+                  'invalids':invalids_number[0] }]
+        json_dict = dict_to_json(dict) 
+        self.write(json_dict)
 
 class DataHandler(tornado.web.RequestHandler):
     def get(self):
         con = database_connect()
         with con:
             cur = con.cursor()
-            cur.execute("SELECT DISTINCT time, temp, humi  FROM log WHERE data = 1 ORDER BY time")
+            # TODO: Only the time will be DISTINCT
+            cur.execute("SELECT time, temp, humi FROM log WHERE data = 1 GROUP BY time ORDER BY time")
             rows = cur.fetchall()
-            data_dict = []
+            dict = []
             for row in rows:
-                data_dict.append({ 'time':row[0].strftime("%d-%m-%Y %H:%M"), 'temp':row[1], 'humi':row[2]})
-        data_json = json.dumps(data_dict, sort_keys=True)
-        self.write(data_json)
+                dict.append({ 'time':row[0].strftime("%d-%m-%Y %H:%M"), 'humi':row[1], 'temp':row[2]})
+        json_dict = dict_to_json(dict)
+        self.write(json_dict)
 
 class MainHandler(tornado.web.RequestHandler):
     def get(self):
-        pretty_now = normalized_datetime()
-        main_dict = [ { 'device':'RPi Bilbao', 'time': pretty_now } ]
-        main_json = json.dumps(main_dict, indent = 4, separators=(',', ': '), sort_keys=True)
-        self.write(main_json)
+        dict = [{ 'software':SW_NAME, 'author': AUTHOR, 'version': VERSION , 'device':DEVICE }]
+        json_dict = dict_to_json(dict)
+        self.write(json_dict)
 
 application = tornado.web.Application([
     (r"/", MainHandler),
@@ -73,9 +98,9 @@ application = tornado.web.Application([
 ])
 
 if __name__ == "__main__":
-    start_RGB()
-    RGB.activate(RGB.RGB_BLUE)
-    time.sleep(1)
-    RGB.deactivate(RGB.RGB_BLUE)
+    #start_RGB()
+    #RGB.activate(RGB.RGB_BLUE)
+    #time.sleep(1)
+    #RGB.deactivate(RGB.RGB_BLUE)
     application.listen(80)
     tornado.ioloop.IOLoop.instance().start()

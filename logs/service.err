@@ -678,3 +678,86 @@ SyntaxError: invalid syntax
     statistics_json = json.dumps(statistics_dict, indent = 2, separators=(',', ': '), , sort_keys=True) 
                                                                                       ^
 SyntaxError: invalid syntax
+WARNING:tornado.access:404 GET /favicon.ico (212.55.21.48) 8.86ms
+WARNING:tornado.access:404 GET /favicon.ico (212.55.21.48) 6.11ms
+ERROR:tornado.application:Uncaught exception GET / (212.55.21.48)
+HTTPServerRequest(protocol='http', host='rpibio.noip.me', method='GET', uri='/', version='HTTP/1.1', remote_ip='212.55.21.48', headers={'Accept-Language': 'en-US,en;q=0.8,es;q=0.6', 'Accept-Encoding': 'gzip, deflate, sdch', 'Host': 'rpibio.noip.me', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'User-Agent': 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36', 'Connection': 'keep-alive', 'Cache-Control': 'max-age=0', 'If-None-Match': '"03ceb257d34d1cc315460ffd257017eaffdf7f07"'})
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 1332, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/home/pi/M2More/services.py", line 71, in get
+    json = json.dumps(dict, indent = 4, separators=(',', ': '), sort_keys=True)
+UnboundLocalError: local variable 'json' referenced before assignment
+ERROR:tornado.access:500 GET / (212.55.21.48) 26.76ms
+ERROR:tornado.application:Uncaught exception GET /data (212.55.21.48)
+HTTPServerRequest(protocol='http', host='rpibio.noip.me', method='GET', uri='/data', version='HTTP/1.1', remote_ip='212.55.21.48', headers={'Connection': 'keep-alive', 'Accept-Language': 'en-US,en;q=0.8,es;q=0.6', 'Accept-Encoding': 'gzip, deflate, sdch', 'If-None-Match': '"c332d39c8dac7946fe97f25319dc1064d1fb0374"', 'Host': 'rpibio.noip.me', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'User-Agent': 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36'})
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 1332, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/home/pi/M2More/services.py", line 65, in get
+    self.write(json)
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 656, in write
+    raise TypeError("write() only accepts bytes, unicode, and dict objects")
+TypeError: write() only accepts bytes, unicode, and dict objects
+ERROR:tornado.access:500 GET /data (212.55.21.48) 224.81ms
+ERROR:tornado.application:Uncaught exception GET /data (212.55.21.48)
+HTTPServerRequest(protocol='http', host='rpibio.noip.me', method='GET', uri='/data', version='HTTP/1.1', remote_ip='212.55.21.48', headers={'Connection': 'keep-alive', 'Accept-Language': 'en-US,en;q=0.8,es;q=0.6', 'Accept-Encoding': 'gzip, deflate, sdch', 'Cache-Control': 'max-age=0', 'Host': 'rpibio.noip.me', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'User-Agent': 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36'})
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 1332, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/home/pi/M2More/services.py", line 65, in get
+    self.write(json)
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 656, in write
+    raise TypeError("write() only accepts bytes, unicode, and dict objects")
+TypeError: write() only accepts bytes, unicode, and dict objects
+ERROR:tornado.access:500 GET /data (212.55.21.48) 39.01ms
+ERROR:tornado.application:Uncaught exception GET /data (212.55.21.48)
+HTTPServerRequest(protocol='http', host='rpibio.noip.me', method='GET', uri='/data', version='HTTP/1.1', remote_ip='212.55.21.48', headers={'Connection': 'keep-alive', 'Accept-Language': 'en-US,en;q=0.8,es;q=0.6', 'Accept-Encoding': 'gzip, deflate, sdch', 'Cache-Control': 'max-age=0', 'Host': 'rpibio.noip.me', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'User-Agent': 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36'})
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 1332, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/home/pi/M2More/services.py", line 65, in get
+    self.write(json)
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 656, in write
+    raise TypeError("write() only accepts bytes, unicode, and dict objects")
+TypeError: write() only accepts bytes, unicode, and dict objects
+ERROR:tornado.access:500 GET /data (212.55.21.48) 38.21ms
+ERROR:tornado.application:Uncaught exception GET / (212.55.21.48)
+HTTPServerRequest(protocol='http', host='rpibio.noip.me', method='GET', uri='/', version='HTTP/1.1', remote_ip='212.55.21.48', headers={'Connection': 'keep-alive', 'Accept-Language': 'en-US,en;q=0.8,es;q=0.6', 'Accept-Encoding': 'gzip, deflate, sdch', 'Cache-Control': 'max-age=0', 'Host': 'rpibio.noip.me', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'User-Agent': 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36'})
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 1332, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/home/pi/M2More/services.py", line 75, in get
+    self.write(json_dict)
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 656, in write
+    raise TypeError("write() only accepts bytes, unicode, and dict objects")
+TypeError: write() only accepts bytes, unicode, and dict objects
+ERROR:tornado.access:500 GET / (212.55.21.48) 30.93ms
+ERROR:tornado.application:Uncaught exception GET /statistics (212.55.21.48)
+HTTPServerRequest(protocol='http', host='rpibio.noip.me', method='GET', uri='/statistics', version='HTTP/1.1', remote_ip='212.55.21.48', headers={'Connection': 'keep-alive', 'Accept-Language': 'en-US,en;q=0.8,es;q=0.6', 'Accept-Encoding': 'gzip, deflate, sdch', 'If-None-Match': '"3c7e7e820420b49583bdf358fc37898e67fddb82"', 'Host': 'rpibio.noip.me', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'User-Agent': 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36'})
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 1332, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/home/pi/M2More/services.py", line 55, in get
+    self.write(json_dict)
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 656, in write
+    raise TypeError("write() only accepts bytes, unicode, and dict objects")
+TypeError: write() only accepts bytes, unicode, and dict objects
+ERROR:tornado.access:500 GET /statistics (212.55.21.48) 197.81ms
+WARNING:tornado.access:404 GET /favicon.ico (88.28.27.108) 6.52ms
+  File "/home/pi/M2More/services.py", line 44
+    with con:    
+    ^
+IndentationError: unexpected indent
+  File "/home/pi/M2More/services.py", line 44
+    with con:    
+    ^
+IndentationError: unexpected indent
+  File "/home/pi/M2More/services.py", line 44
+    with con:    
+    ^
+IndentationError: unexpected indent
+  File "/home/pi/M2More/services.py", line 44
+    with con:    
+    ^
+IndentationError: unexpected indent
