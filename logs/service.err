@@ -1350,3 +1350,5 @@ SyntaxError: invalid syntax
     json_dict = dict_to_json(dict, records_number = rows_list[0][0])) 
                                                                     ^
 SyntaxError: invalid syntax
+WARNING:tornado.access:404 GET /statistics/ (192.168.1.35) 6.31ms
+WARNING:tornado.access:404 GET /data/ (192.168.1.35) 6.33ms

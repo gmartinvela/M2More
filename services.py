@@ -38,7 +38,7 @@ def dict_to_json(dict, **kwargs):
     results_dict = {'results': dict, 'datetime': normalized_now}
     if kwargs:    
         results_dict.update(kwargs)
-    json_dict = json.dumps(results_dict, indent = 4, separators=(',', ': '), sort_keys=True)
+    json_dict = json.dumps(results_dict)
     return json_dict
 
 def prepare_datetimes(date):
@@ -73,6 +73,7 @@ class StatisticsHandler(tornado.web.RequestHandler):
                               ["ONE", "ONE", "ONE"])
         dict = [{ 'total':rows_list[0][0], 'valids':rows_list[1][0], 'invalids':rows_list[2][0] }]
         json_dict = dict_to_json(dict, records_number = rows_list[0][0]) 
+        self.set_header("Content-Type", "application/json")        
         self.write(json_dict)
 
 class DataHandler(tornado.web.RequestHandler):
@@ -85,12 +86,14 @@ class DataHandler(tornado.web.RequestHandler):
         for row in rows_list[0]:
             dict.append({ 'time':row[0].strftime("%d-%m-%Y %H:%M"), 'humi':row[1], 'temp':row[2]})
         json_dict = dict_to_json(dict, records_number = rows_list[1][0])
+        self.set_header("Content-Type", "application/json")
         self.write(json_dict)
 
 class MainHandler(tornado.web.RequestHandler):
     def get(self):
         dict = [{ 'software':SW_NAME, 'author': AUTHOR, 'version': VERSION , 'device':DEVICE }]
         json_dict = dict_to_json(dict)
+        self.set_header("Content-Type", "application/json")
         self.write(json_dict)
 
 application = tornado.web.Application([
