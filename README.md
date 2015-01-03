@@ -15,3 +15,7 @@ M2More uses:
 To communicate with the devices inside a LAN from the Internet we configured NO-IP hosts (http://www.noip.com/).
 Through NO-IP the dynamic IP of our LAN looks like a static IP and it is possible to access from outside of the LAN.
 Only it is necessary to configure our Raspberry PI with a static IP and put web services in the HTTP port 80.
+
+M2More RPiBIO v 0.1
+
+![RPiBIOv01](https://raw.github.com/gmartinvela/M2More/master/M2More/utils/images/RPiBIOv01.jpg)
