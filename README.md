@@ -1,6 +1,10 @@
 M2More
 ======
 
+> **NOTE:** M2More uses Raspberry PI boards.
+
+The actual version is 0.1.
+
 M2More is an open source IOT software for M2M devices based on basic sensors.
 The hardware platform selected to integrate the sensors and communications was the Raspberry PI.
 The initial idea is create simple web services with the data of the sensors to read via Internet
@@ -18,4 +22,4 @@ Only it is necessary to configure our Raspberry PI with a static IP and put web 
 
 M2More RPiBIO v 0.1
 
-![RPiBIOv01](https://raw.github.com/gmartinvela/M2More/master/M2More/utils/images/RPiBIOv01.jpg)
+![RPiBIOv01](https://raw.githubusercontent.com/gmartinvela/M2More/master/utils/images/RPiBIOv01.jpg)
