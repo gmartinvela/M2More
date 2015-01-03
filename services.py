@@ -33,11 +33,18 @@ def normalized_datetime():
     pretty_now = now.strftime("%d-%m-%Y %H:%M")
     return pretty_now
 
-def dict_to_json(dict):
+def dict_to_json(dict, **kwargs):
     normalized_now = normalized_datetime()
     results_dict = {'results': dict, 'datetime': normalized_now}
+    if kwargs:    
+        results_dict.update(kwargs)
     json_dict = json.dumps(results_dict, indent = 4, separators=(',', ': '), sort_keys=True)
     return json_dict
+
+def prepare_datetimes(date):
+    start = date + ' 00:00:00'
+    end = date + ' 23:59:59'
+    return start, end
 
 def query_DB(queries, query_types):
     ''' Query to database and return a list with the rows directly from cursor
@@ -57,20 +64,27 @@ def query_DB(queries, query_types):
     return rows_list
 
 class StatisticsHandler(tornado.web.RequestHandler):
-    def get(self):
-        rows_list = query_DB(["SELECT COUNT(*) FROM log", "SELECT COUNT(*) FROM log WHERE data = 0", 
-                              "SELECT COUNT(*) FROM log WHERE data = 1"], ["ONE", "ONE", "ONE"])
+    ''' This service retrieve the quality statistics of the measures of a certain day '''
+    def get(self, date):
+        start, end = prepare_datetimes(date)
+        rows_list = query_DB(["SELECT COUNT(*) FROM log WHERE time between '" + start + "' and '" + end  + "'", 
+                              "SELECT COUNT(*) FROM log WHERE data = 0 AND time between '" + start + "' and '" + end  + "'", 
+                              "SELECT COUNT(*) FROM log WHERE data = 1 AND time between '" + start + "' and '" + end  + "'"], 
+                              ["ONE", "ONE", "ONE"])
         dict = [{ 'total':rows_list[0][0], 'valids':rows_list[1][0], 'invalids':rows_list[2][0] }]
-        json_dict = dict_to_json(dict) 
+        json_dict = dict_to_json(dict, records_number = rows_list[0][0]) 
         self.write(json_dict)
 
 class DataHandler(tornado.web.RequestHandler):
-    def get(self):
-        rows_list = query_DB(["SELECT time, temp, humi FROM log WHERE data = 1 GROUP BY time ORDER BY time"], ["ALL"])
+    ''' This service retrieve the humidity and temperature records of the measures of a certain day '''
+    def get(self, date):
+        start, end = prepare_datetimes(date)
+        rows_list = query_DB(["SELECT time, temp, humi FROM log WHERE data = 1 AND time between '" + start + "' and '" + end  + "' GROUP BY time ORDER BY time",
+                              "SELECT COUNT(DISTINCT time) FROM log WHERE data = 1 AND time between '" + start + "' and '" + end  + "'"], ["ALL", "ONE"])
         dict = []
         for row in rows_list[0]:
             dict.append({ 'time':row[0].strftime("%d-%m-%Y %H:%M"), 'humi':row[1], 'temp':row[2]})
-        json_dict = dict_to_json(dict)
+        json_dict = dict_to_json(dict, records_number = rows_list[1][0])
         self.write(json_dict)
 
 class MainHandler(tornado.web.RequestHandler):
@@ -81,8 +95,8 @@ class MainHandler(tornado.web.RequestHandler):
 
 application = tornado.web.Application([
     (r"/", MainHandler),
-    (r"/statistics", StatisticsHandler),
-    (r"/data", DataHandler),    
+    (r"/statistics/([^/]+)", StatisticsHandler),
+    (r"/data/([^/]+)", DataHandler),    
 ])
 
 if __name__ == "__main__":

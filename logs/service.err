@@ -820,3 +820,533 @@ Traceback (most recent call last):
     for row in rows[0]:
 NameError: global name 'rows' is not defined
 ERROR:tornado.access:500 GET /data (88.31.193.13) 36.61ms
+WARNING:tornado.access:404 GET http://s1.bdstatic.com/r/www/cache/static/home/img/logos/nuomi_ade5465d.png (125.64.35.68) 6.23ms
+WARNING:tornado.access:404 GET http://s1.bdstatic.com/r/www/cache/static/home/img/logos/nuomi_ade5465d.png (125.64.35.67) 6.40ms
+WARNING:tornado.access:404 GET http://1111.ip138.com/ic.asp (222.186.21.98) 6.37ms
+WARNING:tornado.access:404 GET /favicon.ico (192.168.1.38) 6.21ms
+WARNING:tornado.access:404 GET /favicon.ico (192.168.1.38) 6.34ms
+WARNING:tornado.access:404 GET /favicon.ico (66.249.81.163) 7.17ms
+WARNING:tornado.access:404 GET /favicon.ico (66.249.81.163) 6.20ms
+WARNING:tornado.access:404 GET /favicon.ico (66.249.81.169) 6.39ms
+WARNING:tornado.access:404 GET /favicon.ico (192.168.1.35) 6.48ms
+  File "/home/pi/M2More/services.py", line 72
+    dict.append({ 'records_number': row_list[1][1])
+                                                  ^
+SyntaxError: invalid syntax
+  File "/home/pi/M2More/services.py", line 72
+    dict.append({ 'records_number': row_list[1][1])
+                                                  ^
+SyntaxError: invalid syntax
+  File "/home/pi/M2More/services.py", line 72
+    dict.append({ 'records_number': row_list[1][1])
+                                                  ^
+SyntaxError: invalid syntax
+  File "/home/pi/M2More/services.py", line 72
+    dict.append({ 'records_number': row_list[1][1])
+                                                  ^
+SyntaxError: invalid syntax
+  File "/home/pi/M2More/services.py", line 72
+    dict.append({ 'records_number': rows_list[1][1])
+                                                   ^
+SyntaxError: invalid syntax
+  File "/home/pi/M2More/services.py", line 72
+    dict.append({ 'records_number': rows_list[1][1])
+                                                   ^
+SyntaxError: invalid syntax
+  File "/home/pi/M2More/services.py", line 72
+    dict.append({ 'records_number': rows_list[1][1])
+                                                   ^
+SyntaxError: invalid syntax
+  File "/home/pi/M2More/services.py", line 72
+    dict.append({ 'records_number': rows_list[1][1])
+                                                   ^
+SyntaxError: invalid syntax
+ERROR:tornado.application:Uncaught exception GET /data (192.168.1.35)
+HTTPServerRequest(protocol='http', host='192.168.1.50', method='GET', uri='/data', version='HTTP/1.1', remote_ip='192.168.1.35', headers={'Accept-Language': 'en-US,en;q=0.8,es;q=0.6', 'Accept-Encoding': 'gzip, deflate, sdch', 'Host': '192.168.1.50', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'User-Agent': 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36', 'Connection': 'keep-alive', 'Cookie': '__utma=90629722.1889644263.1420119736.1420119736.1420119736.1; __utmz=90629722.1420119736.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)', 'Cache-Control': 'max-age=0', 'If-None-Match': '"708cd6328ca3508e7830ced0bb31b4da71f76b44"'})
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 1332, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/home/pi/M2More/services.py", line 72, in get
+    dict.append({ 'records_number': rows_list[1][1]})
+IndexError: tuple index out of range
+ERROR:tornado.access:500 GET /data (192.168.1.35) 229.19ms
+ERROR:tornado.application:Uncaught exception GET /data (192.168.1.35)
+HTTPServerRequest(protocol='http', host='192.168.1.50', method='GET', uri='/data', version='HTTP/1.1', remote_ip='192.168.1.35', headers={'Accept-Language': 'en-US,en;q=0.8,es;q=0.6', 'Accept-Encoding': 'gzip, deflate, sdch', 'Host': '192.168.1.50', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'User-Agent': 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36', 'Connection': 'keep-alive', 'Cookie': '__utma=90629722.1889644263.1420119736.1420119736.1420119736.1; __utmz=90629722.1420119736.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)', 'Cache-Control': 'max-age=0'})
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 1332, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/home/pi/M2More/services.py", line 72, in get
+    dict.append({ 'records_number': rows_list[1][1]})
+IndexError: tuple index out of range
+ERROR:tornado.access:500 GET /data (192.168.1.35) 34.97ms
+  File "/home/pi/M2More/services.py", line 72
+    dict.append('records_number': rows_list[1][0])
+                                ^
+SyntaxError: invalid syntax
+  File "/home/pi/M2More/services.py", line 72
+    dict.append('records_number': rows_list[1][0])
+                                ^
+SyntaxError: invalid syntax
+  File "/home/pi/M2More/services.py", line 72
+    dict.append('records_number': rows_list[1][0])
+                                ^
+SyntaxError: invalid syntax
+  File "/home/pi/M2More/services.py", line 72
+    dict.append('records_number': rows_list[1][0])
+                                ^
+SyntaxError: invalid syntax
+  File "/home/pi/M2More/services.py", line 38
+    results_dict = {'results': dict, args, 'datetime': normalized_now}
+                                         ^
+SyntaxError: invalid syntax
+  File "/home/pi/M2More/services.py", line 38
+    results_dict = {'results': dict, args, 'datetime': normalized_now}
+                                         ^
+SyntaxError: invalid syntax
+  File "/home/pi/M2More/services.py", line 38
+    results_dict = {'results': dict, args, 'datetime': normalized_now}
+                                         ^
+SyntaxError: invalid syntax
+  File "/home/pi/M2More/services.py", line 38
+    results_dict = {'results': dict, args, 'datetime': normalized_now}
+                                         ^
+SyntaxError: invalid syntax
+  File "/home/pi/M2More/services.py", line 38
+    results_dict = {'results': dict, args, 'datetime': normalized_now}
+                                         ^
+SyntaxError: invalid syntax
+  File "/home/pi/M2More/services.py", line 38
+    results_dict = {'results': dict, args, 'datetime': normalized_now}
+                                         ^
+SyntaxError: invalid syntax
+  File "/home/pi/M2More/services.py", line 38
+    results_dict = {'results': dict, args, 'datetime': normalized_now}
+                                         ^
+SyntaxError: invalid syntax
+  File "/home/pi/M2More/services.py", line 38
+    results_dict = {'results': dict, args, 'datetime': normalized_now}
+                                         ^
+SyntaxError: invalid syntax
+  File "/home/pi/M2More/services.py", line 38
+    results_dict = {'results': dict, kwargs, 'datetime': normalized_now}
+                                           ^
+SyntaxError: invalid syntax
+  File "/home/pi/M2More/services.py", line 38
+    results_dict = {'results': dict, kwargs, 'datetime': normalized_now}
+                                           ^
+SyntaxError: invalid syntax
+  File "/home/pi/M2More/services.py", line 38
+    results_dict = {'results': dict, kwargs, 'datetime': normalized_now}
+                                           ^
+SyntaxError: invalid syntax
+  File "/home/pi/M2More/services.py", line 38
+    results_dict = {'results': dict, kwargs, 'datetime': normalized_now}
+                                           ^
+SyntaxError: invalid syntax
+ERROR:tornado.application:Uncaught exception GET /data (192.168.1.35)
+HTTPServerRequest(protocol='http', host='192.168.1.50', method='GET', uri='/data', version='HTTP/1.1', remote_ip='192.168.1.35', headers={'Accept-Language': 'en-US,en;q=0.8,es;q=0.6', 'Accept-Encoding': 'gzip, deflate, sdch', 'Host': '192.168.1.50', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'User-Agent': 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36', 'Connection': 'keep-alive', 'Cookie': '__utma=90629722.1889644263.1420119736.1420119736.1420119736.1; __utmz=90629722.1420119736.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)', 'Cache-Control': 'max-age=0', 'If-None-Match': '"7132d9c28142d71a9db51f516ebcf3ecde6083e6"'})
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 1332, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/home/pi/M2More/services.py", line 77, in get
+    json_dict = dict_to_json(dict, records_number = rows_list[1][0])
+  File "/home/pi/M2More/services.py", line 40, in dict_to_json
+    results_dict.append(kwargs)
+AttributeError: 'dict' object has no attribute 'append'
+ERROR:tornado.access:500 GET /data (192.168.1.35) 233.73ms
+ERROR:tornado.application:Uncaught exception GET /data (192.168.1.35)
+HTTPServerRequest(protocol='http', host='192.168.1.50', method='GET', uri='/data', version='HTTP/1.1', remote_ip='192.168.1.35', headers={'Accept-Language': 'en-US,en;q=0.8,es;q=0.6', 'Accept-Encoding': 'gzip, deflate, sdch', 'Host': '192.168.1.50', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'User-Agent': 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36', 'Connection': 'keep-alive', 'Cookie': '__utma=90629722.1889644263.1420119736.1420119736.1420119736.1; __utmz=90629722.1420119736.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)', 'Cache-Control': 'max-age=0'})
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 1332, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/home/pi/M2More/services.py", line 77, in get
+    json_dict = dict_to_json(dict, records_number = rows_list[1][0])
+  File "/home/pi/M2More/services.py", line 40, in dict_to_json
+    results_dict.append(kwargs)
+AttributeError: 'dict' object has no attribute 'append'
+ERROR:tornado.access:500 GET /data (192.168.1.35) 40.01ms
+Traceback (most recent call last):
+  File "/home/pi/M2More/services.py", line 90, in <module>
+    (r"/data/([^/]+", DataHandler),    
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 1660, in __init__
+    self.add_handlers(".*$", handlers)
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 1715, in add_handlers
+    spec = URLSpec(*spec)
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 2774, in __init__
+    self.regex = re.compile(pattern)
+  File "/usr/lib/python2.7/re.py", line 190, in compile
+    return _compile(pattern, flags)
+  File "/usr/lib/python2.7/re.py", line 242, in _compile
+    raise error, v # invalid expression
+sre_constants.error: unbalanced parenthesis
+Traceback (most recent call last):
+  File "/home/pi/M2More/services.py", line 90, in <module>
+    (r"/data/([^/]+", DataHandler),    
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 1660, in __init__
+    self.add_handlers(".*$", handlers)
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 1715, in add_handlers
+    spec = URLSpec(*spec)
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 2774, in __init__
+    self.regex = re.compile(pattern)
+  File "/usr/lib/python2.7/re.py", line 190, in compile
+    return _compile(pattern, flags)
+  File "/usr/lib/python2.7/re.py", line 242, in _compile
+    raise error, v # invalid expression
+sre_constants.error: unbalanced parenthesis
+Traceback (most recent call last):
+  File "/home/pi/M2More/services.py", line 90, in <module>
+    (r"/data/([^/]+", DataHandler),    
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 1660, in __init__
+    self.add_handlers(".*$", handlers)
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 1715, in add_handlers
+    spec = URLSpec(*spec)
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 2774, in __init__
+    self.regex = re.compile(pattern)
+  File "/usr/lib/python2.7/re.py", line 190, in compile
+    return _compile(pattern, flags)
+  File "/usr/lib/python2.7/re.py", line 242, in _compile
+    raise error, v # invalid expression
+sre_constants.error: unbalanced parenthesis
+Traceback (most recent call last):
+  File "/home/pi/M2More/services.py", line 90, in <module>
+    (r"/data/([^/]+", DataHandler),    
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 1660, in __init__
+    self.add_handlers(".*$", handlers)
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 1715, in add_handlers
+    spec = URLSpec(*spec)
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 2774, in __init__
+    self.regex = re.compile(pattern)
+  File "/usr/lib/python2.7/re.py", line 190, in compile
+    return _compile(pattern, flags)
+  File "/usr/lib/python2.7/re.py", line 242, in _compile
+    raise error, v # invalid expression
+sre_constants.error: unbalanced parenthesis
+Traceback (most recent call last):
+  File "/home/pi/M2More/services.py", line 90, in <module>
+    (r"/data/([^/]+", DataHandler),    
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 1660, in __init__
+    self.add_handlers(".*$", handlers)
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 1715, in add_handlers
+    spec = URLSpec(*spec)
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 2774, in __init__
+    self.regex = re.compile(pattern)
+  File "/usr/lib/python2.7/re.py", line 190, in compile
+    return _compile(pattern, flags)
+  File "/usr/lib/python2.7/re.py", line 242, in _compile
+    raise error, v # invalid expression
+sre_constants.error: unbalanced parenthesis
+Traceback (most recent call last):
+  File "/home/pi/M2More/services.py", line 90, in <module>
+    (r"/data/([^/]+", DataHandler),    
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 1660, in __init__
+    self.add_handlers(".*$", handlers)
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 1715, in add_handlers
+    spec = URLSpec(*spec)
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 2774, in __init__
+    self.regex = re.compile(pattern)
+  File "/usr/lib/python2.7/re.py", line 190, in compile
+    return _compile(pattern, flags)
+  File "/usr/lib/python2.7/re.py", line 242, in _compile
+    raise error, v # invalid expression
+sre_constants.error: unbalanced parenthesis
+Traceback (most recent call last):
+  File "/home/pi/M2More/services.py", line 90, in <module>
+    (r"/data/([^/]+", DataHandler),    
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 1660, in __init__
+    self.add_handlers(".*$", handlers)
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 1715, in add_handlers
+    spec = URLSpec(*spec)
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 2774, in __init__
+    self.regex = re.compile(pattern)
+  File "/usr/lib/python2.7/re.py", line 190, in compile
+    return _compile(pattern, flags)
+  File "/usr/lib/python2.7/re.py", line 242, in _compile
+    raise error, v # invalid expression
+sre_constants.error: unbalanced parenthesis
+Traceback (most recent call last):
+  File "/home/pi/M2More/services.py", line 90, in <module>
+    (r"/data/([^/]+", DataHandler),    
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 1660, in __init__
+    self.add_handlers(".*$", handlers)
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 1715, in add_handlers
+    spec = URLSpec(*spec)
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 2774, in __init__
+    self.regex = re.compile(pattern)
+  File "/usr/lib/python2.7/re.py", line 190, in compile
+    return _compile(pattern, flags)
+  File "/usr/lib/python2.7/re.py", line 242, in _compile
+    raise error, v # invalid expression
+sre_constants.error: unbalanced parenthesis
+Traceback (most recent call last):
+  File "/home/pi/M2More/services.py", line 90, in <module>
+    (r"/data/([^/]+", DataHandler),    
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 1660, in __init__
+    self.add_handlers(".*$", handlers)
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 1715, in add_handlers
+    spec = URLSpec(*spec)
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 2774, in __init__
+    self.regex = re.compile(pattern)
+  File "/usr/lib/python2.7/re.py", line 190, in compile
+    return _compile(pattern, flags)
+  File "/usr/lib/python2.7/re.py", line 242, in _compile
+    raise error, v # invalid expression
+sre_constants.error: unbalanced parenthesis
+Traceback (most recent call last):
+  File "/home/pi/M2More/services.py", line 90, in <module>
+    (r"/data/([^/]+", DataHandler),    
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 1660, in __init__
+    self.add_handlers(".*$", handlers)
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 1715, in add_handlers
+    spec = URLSpec(*spec)
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 2774, in __init__
+    self.regex = re.compile(pattern)
+  File "/usr/lib/python2.7/re.py", line 190, in compile
+    return _compile(pattern, flags)
+  File "/usr/lib/python2.7/re.py", line 242, in _compile
+    raise error, v # invalid expression
+sre_constants.error: unbalanced parenthesis
+Traceback (most recent call last):
+  File "/home/pi/M2More/services.py", line 90, in <module>
+    (r"/data/([^/]+", DataHandler),    
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 1660, in __init__
+    self.add_handlers(".*$", handlers)
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 1715, in add_handlers
+    spec = URLSpec(*spec)
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 2774, in __init__
+    self.regex = re.compile(pattern)
+  File "/usr/lib/python2.7/re.py", line 190, in compile
+    return _compile(pattern, flags)
+  File "/usr/lib/python2.7/re.py", line 242, in _compile
+    raise error, v # invalid expression
+sre_constants.error: unbalanced parenthesis
+Traceback (most recent call last):
+  File "/home/pi/M2More/services.py", line 90, in <module>
+    (r"/data/([^/]+", DataHandler),    
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 1660, in __init__
+    self.add_handlers(".*$", handlers)
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 1715, in add_handlers
+    spec = URLSpec(*spec)
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 2774, in __init__
+    self.regex = re.compile(pattern)
+  File "/usr/lib/python2.7/re.py", line 190, in compile
+    return _compile(pattern, flags)
+  File "/usr/lib/python2.7/re.py", line 242, in _compile
+    raise error, v # invalid expression
+sre_constants.error: unbalanced parenthesis
+Traceback (most recent call last):
+  File "/home/pi/M2More/services.py", line 90, in <module>
+    (r"/data/([^/]+", DataHandler),    
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 1660, in __init__
+    self.add_handlers(".*$", handlers)
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 1715, in add_handlers
+    spec = URLSpec(*spec)
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 2774, in __init__
+    self.regex = re.compile(pattern)
+  File "/usr/lib/python2.7/re.py", line 190, in compile
+    return _compile(pattern, flags)
+  File "/usr/lib/python2.7/re.py", line 242, in _compile
+    raise error, v # invalid expression
+sre_constants.error: unbalanced parenthesis
+Traceback (most recent call last):
+  File "/home/pi/M2More/services.py", line 90, in <module>
+    (r"/data/([^/]+", DataHandler),    
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 1660, in __init__
+    self.add_handlers(".*$", handlers)
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 1715, in add_handlers
+    spec = URLSpec(*spec)
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 2774, in __init__
+    self.regex = re.compile(pattern)
+  File "/usr/lib/python2.7/re.py", line 190, in compile
+    return _compile(pattern, flags)
+  File "/usr/lib/python2.7/re.py", line 242, in _compile
+    raise error, v # invalid expression
+sre_constants.error: unbalanced parenthesis
+Traceback (most recent call last):
+  File "/home/pi/M2More/services.py", line 90, in <module>
+    (r"/data/([^/]+", DataHandler),    
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 1660, in __init__
+    self.add_handlers(".*$", handlers)
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 1715, in add_handlers
+    spec = URLSpec(*spec)
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 2774, in __init__
+    self.regex = re.compile(pattern)
+  File "/usr/lib/python2.7/re.py", line 190, in compile
+    return _compile(pattern, flags)
+  File "/usr/lib/python2.7/re.py", line 242, in _compile
+    raise error, v # invalid expression
+sre_constants.error: unbalanced parenthesis
+Traceback (most recent call last):
+  File "/home/pi/M2More/services.py", line 90, in <module>
+    (r"/data/([^/]+", DataHandler),    
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 1660, in __init__
+    self.add_handlers(".*$", handlers)
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 1715, in add_handlers
+    spec = URLSpec(*spec)
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 2774, in __init__
+    self.regex = re.compile(pattern)
+  File "/usr/lib/python2.7/re.py", line 190, in compile
+    return _compile(pattern, flags)
+  File "/usr/lib/python2.7/re.py", line 242, in _compile
+    raise error, v # invalid expression
+sre_constants.error: unbalanced parenthesis
+Traceback (most recent call last):
+  File "/home/pi/M2More/services.py", line 90, in <module>
+    (r"/data/([^/]+", DataHandler),    
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 1660, in __init__
+    self.add_handlers(".*$", handlers)
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 1715, in add_handlers
+    spec = URLSpec(*spec)
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 2774, in __init__
+    self.regex = re.compile(pattern)
+  File "/usr/lib/python2.7/re.py", line 190, in compile
+    return _compile(pattern, flags)
+  File "/usr/lib/python2.7/re.py", line 242, in _compile
+    raise error, v # invalid expression
+sre_constants.error: unbalanced parenthesis
+Traceback (most recent call last):
+  File "/home/pi/M2More/services.py", line 90, in <module>
+    (r"/data/([^/]+", DataHandler),    
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 1660, in __init__
+    self.add_handlers(".*$", handlers)
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 1715, in add_handlers
+    spec = URLSpec(*spec)
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 2774, in __init__
+    self.regex = re.compile(pattern)
+  File "/usr/lib/python2.7/re.py", line 190, in compile
+    return _compile(pattern, flags)
+  File "/usr/lib/python2.7/re.py", line 242, in _compile
+    raise error, v # invalid expression
+sre_constants.error: unbalanced parenthesis
+Traceback (most recent call last):
+  File "/home/pi/M2More/services.py", line 90, in <module>
+    (r"/data/([^/]+", DataHandler),    
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 1660, in __init__
+    self.add_handlers(".*$", handlers)
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 1715, in add_handlers
+    spec = URLSpec(*spec)
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 2774, in __init__
+    self.regex = re.compile(pattern)
+  File "/usr/lib/python2.7/re.py", line 190, in compile
+    return _compile(pattern, flags)
+  File "/usr/lib/python2.7/re.py", line 242, in _compile
+    raise error, v # invalid expression
+sre_constants.error: unbalanced parenthesis
+Traceback (most recent call last):
+  File "/home/pi/M2More/services.py", line 90, in <module>
+    (r"/data/([^/]+", DataHandler),    
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 1660, in __init__
+    self.add_handlers(".*$", handlers)
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 1715, in add_handlers
+    spec = URLSpec(*spec)
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 2774, in __init__
+    self.regex = re.compile(pattern)
+  File "/usr/lib/python2.7/re.py", line 190, in compile
+    return _compile(pattern, flags)
+  File "/usr/lib/python2.7/re.py", line 242, in _compile
+    raise error, v # invalid expression
+sre_constants.error: unbalanced parenthesis
+Traceback (most recent call last):
+  File "/home/pi/M2More/services.py", line 90, in <module>
+    (r"/data/([^/]+", DataHandler),    
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 1660, in __init__
+    self.add_handlers(".*$", handlers)
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 1715, in add_handlers
+    spec = URLSpec(*spec)
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 2774, in __init__
+    self.regex = re.compile(pattern)
+  File "/usr/lib/python2.7/re.py", line 190, in compile
+    return _compile(pattern, flags)
+  File "/usr/lib/python2.7/re.py", line 242, in _compile
+    raise error, v # invalid expression
+sre_constants.error: unbalanced parenthesis
+Traceback (most recent call last):
+  File "/home/pi/M2More/services.py", line 90, in <module>
+    (r"/data/([^/]+", DataHandler),    
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 1660, in __init__
+    self.add_handlers(".*$", handlers)
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 1715, in add_handlers
+    spec = URLSpec(*spec)
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 2774, in __init__
+    self.regex = re.compile(pattern)
+  File "/usr/lib/python2.7/re.py", line 190, in compile
+    return _compile(pattern, flags)
+  File "/usr/lib/python2.7/re.py", line 242, in _compile
+    raise error, v # invalid expression
+sre_constants.error: unbalanced parenthesis
+Traceback (most recent call last):
+  File "/home/pi/M2More/services.py", line 90, in <module>
+    (r"/data/([^/]+", DataHandler),    
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 1660, in __init__
+    self.add_handlers(".*$", handlers)
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 1715, in add_handlers
+    spec = URLSpec(*spec)
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 2774, in __init__
+    self.regex = re.compile(pattern)
+  File "/usr/lib/python2.7/re.py", line 190, in compile
+    return _compile(pattern, flags)
+  File "/usr/lib/python2.7/re.py", line 242, in _compile
+    raise error, v # invalid expression
+sre_constants.error: unbalanced parenthesis
+Traceback (most recent call last):
+  File "/home/pi/M2More/services.py", line 90, in <module>
+    (r"/data/([^/]+", DataHandler),    
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 1660, in __init__
+    self.add_handlers(".*$", handlers)
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 1715, in add_handlers
+    spec = URLSpec(*spec)
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 2774, in __init__
+    self.regex = re.compile(pattern)
+  File "/usr/lib/python2.7/re.py", line 190, in compile
+    return _compile(pattern, flags)
+  File "/usr/lib/python2.7/re.py", line 242, in _compile
+    raise error, v # invalid expression
+sre_constants.error: unbalanced parenthesis
+Traceback (most recent call last):
+  File "/home/pi/M2More/services.py", line 90, in <module>
+    (r"/data/([^/]+)", DataHandler),    
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 1660, in __init__
+    self.add_handlers(".*$", handlers)
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 1715, in add_handlers
+    spec = URLSpec(*spec)
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 2774, in __init__
+    self.regex = re.compile(pattern)
+  File "/usr/lib/python2.7/re.py", line 190, in compile
+    return _compile(pattern, flags)
+  File "/usr/lib/python2.7/re.py", line 242, in _compile
+    raise error, v # invalid expression
+sre_constants.error: unbalanced parenthesis
+/home/pi/M2More/services.py:53: Warning: Incorrect datetime value: '2015-01- 00:00:00' for column 'time' at row 1
+  cur.execute(query)
+/home/pi/M2More/services.py:53: Warning: Incorrect datetime value: '2015-01- 23:59:59' for column 'time' at row 1
+  cur.execute(query)
+ERROR:tornado.application:Uncaught exception GET /statistics/2015-01-02 (192.168.1.35)
+HTTPServerRequest(protocol='http', host='192.168.1.50', method='GET', uri='/statistics/2015-01-02', version='HTTP/1.1', remote_ip='192.168.1.35', headers={'Connection': 'keep-alive', 'Accept-Language': 'en-US,en;q=0.8,es;q=0.6', 'Accept-Encoding': 'gzip, deflate, sdch', 'Cookie': '__utma=90629722.1889644263.1420119736.1420119736.1420119736.1; __utmz=90629722.1420119736.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)', 'Host': '192.168.1.50', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'User-Agent': 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36'})
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 1332, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/home/pi/M2More/services.py", line 73, in get
+    ["ONE", "ONE", "ONE"])
+  File "/home/pi/M2More/services.py", line 58, in query_DB
+    cur.execute(query)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/cursors.py", line 174, in execute
+    self.errorhandler(self, exc, value)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+ProgrammingError: (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'between '2015-01-02 00:00:00' and '2015-01-02 23:59:59'' at line 1")
+ERROR:tornado.access:500 GET /statistics/2015-01-02 (192.168.1.35) 36.74ms
+  File "/home/pi/M2More/services.py", line 75
+    json_dict = dict_to_json(dict, records_number = rows_list[0][0])) 
+                                                                    ^
+SyntaxError: invalid syntax
+  File "/home/pi/M2More/services.py", line 75
+    json_dict = dict_to_json(dict, records_number = rows_list[0][0])) 
+                                                                    ^
+SyntaxError: invalid syntax
+  File "/home/pi/M2More/services.py", line 75
+    json_dict = dict_to_json(dict, records_number = rows_list[0][0])) 
+                                                                    ^
+SyntaxError: invalid syntax
+  File "/home/pi/M2More/services.py", line 75
+    json_dict = dict_to_json(dict, records_number = rows_list[0][0])) 
+                                                                    ^
+SyntaxError: invalid syntax
