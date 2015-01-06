@@ -71,7 +71,7 @@ class StatisticsHandler(tornado.web.RequestHandler):
                               "SELECT COUNT(*) FROM log WHERE data = 0 AND time between '" + start + "' and '" + end  + "'", 
                               "SELECT COUNT(*) FROM log WHERE data = 1 AND time between '" + start + "' and '" + end  + "'"], 
                               ["ONE", "ONE", "ONE"])
-        dict = [{ 'total':rows_list[0][0], 'valids':rows_list[1][0], 'invalids':rows_list[2][0] }]
+        dict = [{ 'total':rows_list[0][0], 'invalids':rows_list[1][0], 'valids':rows_list[2][0] }]
         json_dict = dict_to_json(dict, records_number = rows_list[0][0]) 
         self.set_header("Content-Type", "application/json")        
         self.write(json_dict)
@@ -96,10 +96,21 @@ class MainHandler(tornado.web.RequestHandler):
         self.set_header("Content-Type", "application/json")
         self.write(json_dict)
 
+class NowHandler(tornado.web.RequestHandler):
+    def get(self):
+        rows_list = query_DB(["SELECT time, temp, humi FROM log WHERE data=1 ORDER BY id DESC LIMIT 1"], ["ALL"])
+        dict = []
+        for row in rows_list[0]:
+            dict.append({ 'time':row[0].strftime("%d-%m-%Y %H:%M"), 'humi':row[1], 'temp':row[2]})
+        json_dict = dict_to_json(dict)
+        self.set_header("Content-Type", "application/json")
+        self.write(json_dict)
+
 application = tornado.web.Application([
     (r"/", MainHandler),
     (r"/statistics/([^/]+)", StatisticsHandler),
-    (r"/data/([^/]+)", DataHandler),    
+    (r"/data/([^/]+)", DataHandler),
+    (r"/last", NowHandler),    
 ])
 
 if __name__ == "__main__":
